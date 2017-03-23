@@ -1,0 +1,75 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+    font-size: 18px;
+}
+
+.row {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.site-header {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.banner-image {
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.site-footer {
+    border-top: 1px solid #eee;
+    padding: 20px 0;
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+@import "tables";
+
+.entry-header {
+    border-bottom: 1px solid #eee;
+}
