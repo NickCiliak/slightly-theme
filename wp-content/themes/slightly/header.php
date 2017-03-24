@@ -29,7 +29,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
   <div class="row">
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 site-header-col">
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
@@ -45,8 +45,6 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-      </div>
-    <div class="col-xs-12 col-md-6">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'slightly' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>

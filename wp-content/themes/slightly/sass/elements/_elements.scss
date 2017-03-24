@@ -19,15 +19,27 @@ body {
     padding: 0 30px;
 }
 
+.widget-area {
+  margin-top: 32px;
+}
+
 .site-header {
     border-bottom: 1px solid #eee;
-    padding: 20px 0;
+}
+
+.site-branding {
+  flex-grow: 1;
 }
 
 .site-title {
     margin: 0;
+    padding: 20px 0;
     font-size: 18px;
     font-weight: normal;
+}
+
+.site-header-col {
+  display: flex;
 }
 
 .banner-image {
@@ -72,4 +84,8 @@ figure {
 
 .entry-header {
     border-bottom: 1px solid #eee;
+}
+
+.woocommerce-message {
+  background: red;
 }
