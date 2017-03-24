@@ -14,13 +14,20 @@
 
 get_header(); ?>
 
+<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+<?php if( $feat_image ) : ?>
+    <div class="banner-image" style="background-image: url(<?php echo $feat_image; ?>);"></div>
+<?php endif; ?>
+
   <div class="row">
-    <div class="col-xs-12 col-md-8">
+    <div class="col-xs-12">
+        
+            <h1><?php wp_title(''); ?></h1>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
+        <?php
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
@@ -55,7 +62,7 @@ get_header(); ?>
 	</div><!-- #primary -->
         
     </div>
-  <div class="col-xs-12 col-md-4">
+  <div class="col-xs-12">
       <?php
 get_sidebar(); ?>
       </div>

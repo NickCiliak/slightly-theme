@@ -141,3 +141,49 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Get recent posts for homepage
+ * https://css-tricks.com/snippets/wordpress/recent-posts-function/
+ */
+function recent_posts($no_posts = 10, $excerpts = true) {
+
+   global $wpdb;
+
+   $request = "SELECT ID, post_title, post_excerpt FROM $wpdb->posts WHERE post_status = 'publish' AND post_type='post' ORDER BY post_date DESC LIMIT $no_posts";
+
+   $posts = $wpdb->get_results($request);
+
+   if($posts) {
+
+       foreach ($posts as $posts) {
+               $post_title = stripslashes($posts->post_title);
+               $permalink = get_permalink($posts->ID);
+               $feat_image = wp_get_attachment_url( get_post_thumbnail_id($posts->ID) );
+
+               $output .= '<div class="col-xs-12 col-sm-6 col-md-4"><div class="post-thumb" style="background-image: url(' . $feat_image . ');"></div><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
+
+               if($excerpts) {
+                       $output.= '<br />' . stripslashes($posts->post_excerpt);
+               }
+
+               $output .= '</div>';
+       }
+
+   } else {
+           $output .= '<li>No posts found</li>';
+   }
+
+   echo $output;
+}
+
+
+
+/*
+
+<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+<?php if( $feat_image ) : ?>
+    <div class="banner-image" style="background-image: url(<?php echo $feat_image; ?>);"></div>
+<?php endif; ?>
+
+*/

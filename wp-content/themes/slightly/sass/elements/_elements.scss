@@ -14,9 +14,11 @@ body {
 }
 
 .row {
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
+    
+    &.no-pad { padding: 0; }
 }
 
 .widget-area {
@@ -86,6 +88,9 @@ figure {
     border-bottom: 1px solid #eee;
 }
 
-.woocommerce-message {
-  background: red;
+.post-thumb {
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #eee;
 }

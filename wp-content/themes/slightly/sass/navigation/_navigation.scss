@@ -7,3 +7,15 @@
 ## Menus
 --------------------------------------------------------------*/
 @import "menus";
+
+.nav-links {
+    .nav-previous, .nav-next {
+        display: flex;
+        border: 1px solid #eee;
+        
+        a {
+            flex-grow: 1;
+            padding: 10px;
+        }
+    }
+}
