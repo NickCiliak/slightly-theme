@@ -14,10 +14,9 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<link rel="stylesheet" href="https://cdn.rawgit.com/lucasgruwez/waffle-grid/31785e54/dist/waffle-grid.min.css">-->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
 <link rel="profile" href="http://gmpg.org/xfn/11">
-
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
 
@@ -36,7 +35,7 @@
             $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
             $home_url = home_url( '/' );
             if ( has_custom_logo() ) {
-                    echo '<a href="'. $home_url . '" class="site-logo">';
+                    echo '<a href="'. $home_url . '">';
                     echo '<img src="'. esc_url( $logo[0] ) .'">';
                     echo '</a>';
             } else {
@@ -54,7 +53,7 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'slightly' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'slightly' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
       </div>

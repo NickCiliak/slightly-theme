@@ -161,10 +161,10 @@ function recent_posts($no_posts = 10, $excerpts = true) {
                $permalink = get_permalink($posts->ID);
                $feat_image = wp_get_attachment_url( get_post_thumbnail_id($posts->ID) );
 
-               $output .= '<div class="col-xs-12 col-sm-6 col-md-4"><div class="post-thumb" style="background-image: url(' . $feat_image . ');"></div><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
+               $output .= '<a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '"><div class="col-xs-12 col-sm-6 col-md-4"><div class="post-thumb mg-down" style="background-image: url(' . $feat_image . ');"></div></a><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
 
                if($excerpts) {
-                       $output.= '<br />' . stripslashes($posts->post_excerpt);
+                       $output.= '<p>' . stripslashes($posts->post_excerpt) . '</p>';
                }
 
                $output .= '</div>';

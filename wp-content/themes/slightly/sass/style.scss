@@ -63,7 +63,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-@import "forms/forms";
+@import "forms";
 
 /*--------------------------------------------------------------
 # Navigation
@@ -109,3 +109,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # WooCommerce
 --------------------------------------------------------------*/
 @import "woocommerce";
+
+/*--------------------------------------------------------------
+# Utility Classes
+--------------------------------------------------------------*/
+@import "utility";

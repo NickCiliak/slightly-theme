@@ -19,9 +19,8 @@
     <div class="col-xs-12">
         
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'slightly' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'slightly' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'slightly' ), 'slightly', '<a href="https://automattic.com/" rel="designer">Nick Ciliak</a>' ); ?>
+            &copy; <?php echo date('Y') ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> • 
+			<?php printf( esc_html__( '%1$s by %2$s.', 'Slightly' ), 'Slightly Theme', '<a href="http://nickciliak.com" rel="designer">Nick Ciliak</a>' ); ?>
 		</div><!-- .site-info -->
 
         </div>
