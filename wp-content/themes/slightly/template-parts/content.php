@@ -16,11 +16,7 @@
             <div class="col-md-12">
                 <header class="entry-header">
                     <?php
-                    if ( is_single() ) :
                         the_title( '<h1 class="entry-title">', '</h1>' );
-                    else :
-                        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-                    endif;
 
                     if ( 'post' === get_post_type() ) : ?>
                     <div class="entry-meta">
@@ -49,11 +45,11 @@
             </div>
         <?php else : ?>
 
-        <div class="col-md-4">
+        <div class="col-xs-12 col-sm-4">
             <div class="entry-content">
                 <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
                 <?php if( $feat_image ) : ?>
-                    <div class="post-thumb" style="background-image: url(<?php echo $feat_image; ?>);"></div>
+                    <a href=' <?php echo get_permalink() ?> '><div class="post-thumb" style="background-image: url(<?php echo $feat_image; ?>);"></div></a>
                 <?php endif; ?>
 
                 <?php
@@ -71,14 +67,10 @@
             </div><!-- .entry-content -->
         </div>
         
-        <div class="col-md-8">
+        <div class="col-xs-12 col-sm-8">
             <header class="entry-header">
                 <?php
-                if ( is_single() ) :
-                    the_title( '<h1 class="entry-title">', '</h1>' );
-                else :
                     the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-                endif;
 
                 if ( 'post' === get_post_type() ) : ?>
                 <div class="entry-meta">
@@ -93,6 +85,7 @@
         </footer><!-- .entry-footer -->
             
         </div>
+        </a>
         
         <?php endif; ?>
         

@@ -40,6 +40,11 @@ body {
     font-weight: normal;
 }
 
+.site-logo {
+    display: block;
+    max-width: 220px;
+}
+
 .site-header-col {
   display: flex;
 }
@@ -83,10 +88,6 @@ figure {
 }
 
 @import "tables";
-
-.entry-header {
-    border-bottom: 1px solid #eee;
-}
 
 .post-thumb {
     min-height: 200px;

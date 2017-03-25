@@ -93,7 +93,7 @@ function slightly_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'slightly' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'slightly' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="col-xs-12 col-sm-6 col-md-4 widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -177,13 +177,7 @@ function recent_posts($no_posts = 10, $excerpts = true) {
    echo $output;
 }
 
-
-
-/*
-
-<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-<?php if( $feat_image ) : ?>
-    <div class="banner-image" style="background-image: url(<?php echo $feat_image; ?>);"></div>
-<?php endif; ?>
-
-*/
+/**
+ * Add theme support for custom logo in header
+ */
+add_theme_support( 'custom-logo' );
