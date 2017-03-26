@@ -24,11 +24,12 @@ get_header(); ?>
 		while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', get_post_format() );
-echo '<div class="read-next"><h3>Read this next</h3><h2>' . get_previous_post_link('%link', '%title', TRUE) . '</h2></div>';
+            
+            echo '<div class="row no-pad"><div class="col-xs-12 col-md-10 col-md-offset-1 no-pad"><div class="read-next"><h3>Read this next</h3><h2>' . get_previous_post_link('%link', '%title', TRUE) . '</h2></div></div></div>';
         
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
-                echo '<div class="col-xs-12 col-md-8 col-md-offset-2">';
+                echo '<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">';
 				comments_template();
                 echo '</div>';
 			endif;

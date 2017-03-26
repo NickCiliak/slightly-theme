@@ -98,6 +98,15 @@ function slightly_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+    
+	register_sidebar( array(
+		'name'          => 'Footer widget area',
+		'id'            => 'footer',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'slightly_widgets_init' );
 
@@ -181,3 +190,28 @@ function recent_posts($no_posts = 10, $excerpts = true) {
  * Add theme support for custom logo in header
  */
 add_theme_support( 'custom-logo' );
+
+/**
+ * Custom header text
+ */
+function slightly_header_text() {
+
+	if ( !function_exists('pll_register_string') ) {
+		$header_text 		= get_theme_mod('header_text');
+		$header_subtext 	= get_theme_mod('header_subtext');
+		$header_button		= get_theme_mod('header_button');
+	} else {
+		$header_text 		= pll__(get_theme_mod('header_text'));
+		$header_subtext 	= pll__(get_theme_mod('header_subtext'));
+		$header_button		= pll__(get_theme_mod('header_button'));
+	}
+	$header_button_url	= get_theme_mod('header_button_url');
+
+	echo '<div class="header-info">
+            <h2>' . wp_kses_post($header_text) . '</h2>
+            <p>' . wp_kses_post($header_subtext) . '</p>';
+            if ($header_button_url) {
+                echo '<a class="button header-button" href="' . esc_url($header_button_url) . '">' . esc_html($header_button) . '</a>';
+            }
+	echo '</div>';
+}

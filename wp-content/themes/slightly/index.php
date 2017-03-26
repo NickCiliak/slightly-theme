@@ -14,10 +14,17 @@
 
 get_header(); ?>
 
-<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-<?php if( $feat_image ) : ?>
-    <div class="banner-image" style="background-image: url(<?php echo $feat_image; ?>);"></div>
-<?php endif; ?>
+<?php function page_featured_image() {
+        $id = get_queried_object_id ();
+        // Check if the post/page has featured image
+        if ( has_post_thumbnail( $id ) ) {
+            // Change thumbnail size, but I guess full is what you'll need
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'full' );
+            $url = $image[0];
+        } 
+    return $url;
+} ?>
+<div class="banner-image" style="background-image: url(<?php echo page_featured_image();?>);"></div>
 
   <div class="row">
     <div class="col-xs-12">

@@ -16,13 +16,20 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-6">
         
 		<div class="site-info">
             &copy; <?php echo date('Y') ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> • 
 			<?php printf( esc_html__( '%1$s by %2$s.', 'Slightly' ), 'Slightly Theme', '<a href="http://nickciliak.com" rel="designer">Nick Ciliak</a>' ); ?>
 		</div><!-- .site-info -->
 
+    </div>
+        <div class="col-xs-12 col-sm-6">
+            <?php if ( is_active_sidebar( 'footer' ) ) : ?>
+            <div id="footer-widget" class="footer-widget widget-area" role="complementary">
+                <?php dynamic_sidebar( 'footer' ); ?>
+            </div><!-- #primary-sidebar -->
+            <?php endif; ?>
         </div>
     </div>
         

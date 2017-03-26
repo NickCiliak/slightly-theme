@@ -20,8 +20,8 @@ body {
     padding: 0 30px;
 }
 
-.widget-area {
-  margin-top: 32px;
+#secondary.widget-area {
+    margin: 2em 0;
 }
 
 .read-next {
@@ -55,10 +55,28 @@ body {
 }
 
 .banner-image {
-    min-height: 380px;
+    min-height: 280px;
     background-size: cover;
     background-position: center;
     margin-bottom: 2em;
+}
+
+@media (screen and min-width: 520px) {
+    .banner-image {
+        min-height: 380px;
+    }
+}
+
+@media (screen and min-width: 728px) {
+    .banner-image {
+        min-height: 450px;
+    }
+}
+
+@media (screen and min-width: 1080px) {
+    .banner-image {
+        min-height: 500px;
+    }
 }
 
 .entry-title {
@@ -73,6 +91,9 @@ body {
 }
 
 blockquote, q {
+    border-left: 1px solid #eee;
+    padding-left: 1em;
+    
 	quotes: "" "";
 
 	&:before,
@@ -96,6 +117,15 @@ blockquote, q {
         &:first-child {
             border-top: 1px solid #eee;
         }
+    }
+}
+
+.home-header {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    
+    h1 {
+        margin-top: 0;
     }
 }
 
