@@ -139,6 +139,10 @@
     min-height: 100%;
     border: none;
     padding-right: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 14px;
 }
 
 @media screen and (min-width: 37.5em) {
