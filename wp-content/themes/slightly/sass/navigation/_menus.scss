@@ -5,7 +5,9 @@
 .main-navigation {
     
     .current_page_item {
-        background-color: #ecf6f8;
+        -webkit-box-shadow: inset 0px -2px 0px 0px #333;
+        -moz-box-shadow: inset 0px -2px 0px 0px #333;
+        box-shadow: inset 0px -2px 0px 0px #333;
     }
 
 	ul {
@@ -13,6 +15,10 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 14px;
         
         // Subnav
 		ul {
@@ -73,7 +79,9 @@
         padding: 20px;
       
         &:hover {
-
+//        -webkit-box-shadow: inset 0px -2px 0px 0px #eee;
+//        -moz-box-shadow: inset 0px -2px 0px 0px #eee;
+//        box-shadow: inset 0px -2px 0px 0px #eee;
         }
 	}
 

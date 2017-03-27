@@ -24,7 +24,9 @@ get_header(); ?>
         } 
     return $url;
 } ?>
+<?php if( page_featured_image() ) : ?>
 <div class="banner-image" style="background-image: url(<?php echo page_featured_image();?>);"></div>
+<?php endif; ?>
 
   <div class="row">
     <div class="col-xs-12">

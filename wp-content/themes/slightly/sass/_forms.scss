@@ -12,10 +12,10 @@ input[type="submit"] {
     background-color: #fff;
 	color: rgba(0, 0, 0, .8);
 	@include font-size(0.75);
-	line-height: 1;
+	line-height: 1.5;
 	padding: .6em 1em .6em;
     font-size: 16px;
-    color: royalblue;
+    color: #333;
     font-family: 'Source Sans Pro', sans-serif;
 
 	&:hover {
@@ -50,8 +50,10 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
-	padding: 3px;
+	padding: .6em 1em .6em;
     width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.5;
 
 	&:focus {
 		color: $color__text-input-focus;
