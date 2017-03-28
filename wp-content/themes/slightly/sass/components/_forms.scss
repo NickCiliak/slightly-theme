@@ -1,7 +1,6 @@
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
-
 button,
 input[type="button"],
 input[type="reset"],
@@ -70,4 +69,21 @@ textarea {
 
 label {
     display: block;
+}
+
+
+// Other
+
+.search-form {
+    .search-field {
+        float: left;
+        width: calc(70% - 1em);
+        margin-right: 1em;
+        -webkit-appearance: textfield;
+    }
+    
+    .search-submit {
+        float: right;
+        width: 30%;
+    }
 }

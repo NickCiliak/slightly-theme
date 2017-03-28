@@ -1,0 +1,56 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 2em 0;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.read-next {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 2em 0;
+    margin: 0 0 4em 0;
+}
+
+.entry-title {
+    margin-bottom: 0;
+}
+
+.entry-meta {
+    font-weight: bold;
+    color: #989898;
+    letter-spacing: .5px;
+            text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 14px;
+}
+
+.post-thumb {
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #eee;
+}

@@ -1,0 +1,24 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	display: block;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+    
+    .comment-author {
+        img {display: none;}
+    }
+    
+    li {
+        border-bottom: 1px solid #eee;
+        padding: 2em 0;
+        
+        &:first-child {
+            border-top: 1px solid #eee;
+        }
+    }
+}

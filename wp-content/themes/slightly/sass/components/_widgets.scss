@@ -1,27 +1,14 @@
-ul, ol {
-	margin: 0;
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
 }
 
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 0;
-}
-
-dt {
-	font-weight: bold;
-}
-
-dd {
-	margin: 0 1.5em 1.5em;
+#secondary.widget-area {
+    margin: 2em 0;
 }
 
 .widget_search, .widget_recent_entries, .widget_recent_comments, .widget_archive, .widget_categories, .widget_meta, {

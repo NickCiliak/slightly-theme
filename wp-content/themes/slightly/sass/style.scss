@@ -23,94 +23,62 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
+# Mixins
+    # Mixins Master
+# Base
+    # Normalize
+    # Variables
+    # Base
+    # Links
+    # Typography
+# Components
+    # Navigation
+    # Buttons
+    # Forms
+    # Widgets
+    # Comments
+# Layout
+    # Header
+    # Footer
+    # Posts and Pages
+    # WooCommerce
 # Media
-	## Captions
-	## Galleries
+    # Captions
+    # Galleries
+    # Media
+# Modules
+    # Accessibility
+    # Alignments
+    # Clearings
+    # Infinite Scroll
+    # Utility
+
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
+@import "base/normalize";
+@import "base/variables";
+@import "base/base";
+@import "base/links";
+@import "base/typography";
 
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-@import "typography/typography";
+@import "components/navigation";
+@import "components/buttons";
+@import "components/forms";
+@import "components/widgets";
+@import "components/comments";
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "elements/elements";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/posts-and-pages";
+@import "layout/woocommerce";
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "navigation/navigation";
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-@import "modules/accessibility";
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
+@import "media/captions";
+@import "media/galleries";
 @import "media/media";
 
-/*--------------------------------------------------------------
-# WooCommerce
---------------------------------------------------------------*/
-@import "woocommerce";
-
-/*--------------------------------------------------------------
-# Utility Classes
---------------------------------------------------------------*/
-@import "utility";
+@import "modules/accessibility";
+@import "modules/alignments";
+@import "modules/clearings";
+@import "modules/infinite-scroll";
+@import "modules/utility";
