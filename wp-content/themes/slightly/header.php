@@ -39,7 +39,7 @@
                     echo '<img src="'. esc_url( $logo[0] ) .'">';
                     echo '</a>';
             } else {
-                if ( is_front_page() && is_home() ) : ?>
+                if ( is_front_page() || is_home() ) : ?>
                     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                 <?php else : ?>
                     <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
@@ -59,17 +59,6 @@
       </div>
     </div>
 	</header><!-- #masthead -->
-    <?php if ( is_front_page() ) : ?>
-    <div class="row home-header">
-        <div class="col-xs-12 col-sm-6">
-            <h1><?php the_title(); ?></h1>
-            <?php slightly_header_text(); ?>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <img src="<?php header_image(); ?>">
-        </div>
-    </div>
-    <?php endif; ?>
 
 
 	<div id="content" class="site-content">

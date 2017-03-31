@@ -1,13 +1,7 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * Template Name: Homepage
+ * Description: The front page
  *
  * @package Slightly
  */
@@ -20,7 +14,7 @@ get_header(); ?>
 <?php endif; ?>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <div class="col-xs-12">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -41,8 +35,11 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
     </div>
-    </div>      
-  </div>
+    </div> 
+
+<div class="row">
+    <?php recent_posts(3); ?>
+</div>
 
 <?php
 get_footer();

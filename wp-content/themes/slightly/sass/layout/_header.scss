@@ -4,6 +4,7 @@
 
 .site-branding {
   flex-grow: 1;
+  min-width: 20%;
 }
 
 .site-title {
@@ -15,6 +16,11 @@
         font-weight: bold;
         letter-spacing: 2px;
         font-size: 14px;
+  a { border: none; }
+}
+
+.site-description {
+  margin-bottom: .5em;
 }
 
 .site-logo {

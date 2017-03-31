@@ -1,6 +1,7 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
     padding: 0;
+    overflow-wrap: break-word;
 }
 
 h1 {
@@ -24,6 +25,7 @@ p {
 	margin-bottom: 1.5em;
     margin-top: 0;
     font-size: 16px;
+    overflow-wrap: break-word;
 }
 
 dfn, cite, em, i {
@@ -39,7 +41,7 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
+	background-color: #eee;
 	font-family: $font__pre;
 	@include font-size(0.9375);
 	line-height: $font__line-height-pre;
@@ -47,6 +49,7 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+    border-radius: 4px;
 }
 
 code, kbd, tt, var {
@@ -66,10 +69,4 @@ mark, ins {
 
 big {
 	font-size: 125%;
-}
-
-.entry-meta {
-  //  font-size: 14px;
-  //  text-transform: uppercase;
-  //  letter-spacing: .5px;
 }

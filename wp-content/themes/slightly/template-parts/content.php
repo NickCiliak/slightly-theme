@@ -58,7 +58,7 @@
 
                 if ( 'post' === get_post_type() ) : ?>
                 <div class="entry-meta">
-                    <?php slightly_posted_on(); ?>
+                    <a href=" <?php echo get_permalink() ?> "><?php slightly_posted_on(); ?></a>
                 </div><!-- .entry-meta -->
                 <?php
                 endif; ?>

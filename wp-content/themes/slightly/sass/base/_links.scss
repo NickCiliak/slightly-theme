@@ -17,6 +17,7 @@ a {
 	&:active {
 		outline: 0;
         color: #333;
+        border-bottom-color: #333;
 	}
 }
 
@@ -29,4 +30,15 @@ a {
     border-radius: 6px;
     text-transform: uppercase;
     background: #40de40;
+}
+
+p a,
+span a,
+.nav-previous a,
+.nav-next a {
+  border-bottom: 2px solid #d6d6d6;
+	&:hover,
+	&:active {
+        border-bottom-color: #333;
+	}
 }

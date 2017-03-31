@@ -3,13 +3,22 @@
 }
 
 .main-navigation {
-    
-    .current_page_item {
+  
+    display: flex;
+    height: 3rem;
+    width: 100%;
+  //  flex-wrap: nowrap;
+  
+  // weird menu wrapper
+  div { width: 100%; }
+  
+    .current_page_item, .current-menu-parent {
         -webkit-box-shadow: inset 0px -2px 0px 0px #333;
         -moz-box-shadow: inset 0px -2px 0px 0px #333;
         box-shadow: inset 0px -2px 0px 0px #333;
     }
 
+    // #primary-menu
 	ul {
 		display: none;
 		list-style: none;
@@ -19,6 +28,7 @@
         font-weight: bold;
         letter-spacing: 2px;
         font-size: 14px;
+        width: 100%;
         
         // Subnav
 		ul {
@@ -30,6 +40,7 @@
 			z-index: 99999;
             border: 1px solid #eee;
             background: #fff;
+            width: 200px;
 
 			ul {
 				left: -999em;
@@ -41,6 +52,7 @@
 				&.focus > ul {
 					left: 100%;
 				}
+                width: 100%;
 			}
 
 			a {
@@ -72,7 +84,7 @@
 		&.focus > a {
 		}
 	}
-
+  
 	a {
 		display: block;
 		text-decoration: none;
@@ -91,6 +103,11 @@
 	.current-menu-ancestor > a {
 	}
 }
+
+.main-navigation #primary-menu {
+              display: flex;
+        justify-content: flex-end;
+    }
 
 /* Small menu. */
 .menu-toggle,
@@ -134,25 +151,25 @@
     }
 }
 
-.menu-toggle {
-    padding: 10px 20px;
-    min-height: 100%;
-    border: none;
-    padding-right: 0;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2px;
-        font-size: 14px;
-}
-
-@media screen and (min-width: 37.5em) {
+//.menu-toggle {
+//    padding: 10px 20px;
+//    min-height: 100%;
+//    border: none;
+//    padding-right: 0;
+//        text-transform: uppercase;
+//        font-weight: bold;
+//        letter-spacing: 2px;
+//        font-size: 14px;
+//}
+//
+//@media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: block;
 	}
-}
+//}
 
 .comment-navigation,
 .posts-navigation,
@@ -180,12 +197,12 @@
     margin: 1em 0;
     
     .nav-previous, .nav-next {
-        display: flex;
-        border: 1px solid #eee;
+      //  display: flex;
+       // border: 1px solid #eee;
         
         a {
-            flex-grow: 1;
-            padding: 10px;
+        //    flex-grow: 1;
+         //   padding: 10px;
         }
     }
     
