@@ -9,21 +9,29 @@
 
 get_header(); ?>
 
-  <div class="row">
-    <div class="col-xs-12">
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
 		<?php
 		if ( have_posts() ) : ?>
-
+<div class="row">
+    <div class="col-xs-12">
 			<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+    </div>
+</div>
+      <?php endif; ?>
+
+  <div class="row">
+      
+    <div class="col-xs-12 col-sm-8">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<?php
+		if ( have_posts() ) : ?>
 
 			<?php
 			/* Start the Loop */
@@ -49,7 +57,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
     </div>
-  <div class="col-xs-12">
+  <div class="col-xs-12 col-sm-4">
       <?php
 get_sidebar(); ?>
       </div>

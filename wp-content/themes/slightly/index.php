@@ -32,6 +32,10 @@ get_header(); ?>
     <div class="col-xs-12">
         
             <h1><?php wp_title(''); ?></h1>
+      </div>
+</div>
+  <div class="row">
+      <div class="col-xs-12 col-sm-8">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -71,7 +75,7 @@ get_header(); ?>
 	</div><!-- #primary -->
         
     </div>
-  <div class="col-xs-12">
+  <div class="col-xs-12 col-sm-4">
       <?php
 get_sidebar(); ?>
       </div>

@@ -93,7 +93,7 @@ function slightly_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'slightly' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'slightly' ),
-		'before_widget' => '<section id="%1$s" class="col-xs-12 col-sm-6 col-md-4 widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -169,14 +169,23 @@ function recent_posts($no_posts = 10, $excerpts = true) {
                $post_title = stripslashes($posts->post_title);
                $permalink = get_permalink($posts->ID);
                $feat_image = wp_get_attachment_url( get_post_thumbnail_id($posts->ID) );
-
-               $output .= '<a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '"><div class="col-xs-12 col-sm-6 col-md-4"><div class="post-thumb mg-down" style="background-image: url(' . $feat_image . ');"></div></a><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
-
-               if($excerpts) {
+           
+           if ($feat_image) {
+                 $output .= '<div class="col-xs-12 col-sm-6 col-md-4"><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '"><div class="post-thumb mg-down" style="background-image: url(' . $feat_image . ');"></div></a><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
+              if($excerpts) {
                        $output.= '<p>' . stripslashes($posts->post_excerpt) . '</p>';
                }
 
                $output .= '</div>';
+           } else {
+                $output .= '<div class="col-xs-12 col-sm-6 col-md-4"><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
+              if($excerpts) {
+                       $output.= '<p>' . stripslashes($posts->post_excerpt) . '</p>';
+               }
+
+               $output .= '</div>';
+           }
+
        }
 
    } else {

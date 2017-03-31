@@ -40,7 +40,6 @@ get_header(); ?>
 <div class="row">
     <?php recent_posts(3); ?>
 </div>
-  </div>
 
 <?php
 get_footer();

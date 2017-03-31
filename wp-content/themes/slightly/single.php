@@ -9,11 +9,6 @@
 
 get_header(); ?>
 
-<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-<?php if( $feat_image ) : ?>
-    <div class="banner-image" style="background-image: url(<?php echo $feat_image; ?>);"></div>
-<?php endif; ?>
-
   <div class="row">
     <div class="col-xs-12">
 
@@ -39,11 +34,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
     </div>
-      <div class="col-xs-12">
-      <?php
-get_sidebar(); ?>
-      </div>
-      
+
     </div>
 
 <?php

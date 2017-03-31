@@ -26,6 +26,12 @@
                     endif; ?>
                 </header><!-- .entry-header -->
                 <div class="entry-content">
+                    
+<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+<?php if( $feat_image ) : ?>
+    <img src="<?php echo $feat_image; ?>" class="featured-image">
+<?php endif; ?>
+                    
                     <?php
                         the_content( sprintf(
                             /* translators: %s: Name of current post. */
@@ -45,7 +51,7 @@
             </div>
         <?php else : ?>
 
-        <div class="col-xs-12 col-sm-8 no-pad">
+        <div class="col-xs-12 col-sm-11 no-pad">
             <header class="entry-header">
                 <?php
                     the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -58,6 +64,12 @@
                 endif; ?>
             </header><!-- .entry-header -->
             <div class="entry-content">
+                
+<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+                <?php if( $feat_image ) : ?>
+                    <a href=' <?php echo get_permalink() ?> '><img src="<?php echo $feat_image; ?>" class="featured-image"></a>
+                <?php endif; ?>
+                
             <?php
                     the_excerpt( sprintf(
                         /* translators: %s: Name of current post. */
@@ -76,13 +88,7 @@
         </footer><!-- .entry-footer -->
             
         </div>
-        
-        <div class="col-xs-12 col-sm-4">
-                <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-                <?php if( $feat_image ) : ?>
-                    <a href=' <?php echo get_permalink() ?> '><div class="post-thumb" style="background-image: url(<?php echo $feat_image; ?>);"></div></a>
-                <?php endif; ?>
-        </div>
+
         </a>
         
         <?php endif; ?>
