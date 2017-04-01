@@ -4,8 +4,8 @@ $('.more-link').click(function(){
   $('.main-navigation').toggleClass('toggled');
 });
 
-$('.menu-item-has-children').click(function(){
-  $(this).find('.sub-menu').toggleClass('toggled');
+$('.menu-item-has-children a').on('click', function(){
+  $(this).next('.sub-menu').toggleClass('toggled');
 });
 
 function calcWidth() {

@@ -1,5 +1,17 @@
 .main-navigation {
   
+  
+.menu-item-has-children {
+  position: relative;
+}
+.menu-item-has-children:after, .more-menu:after {
+  position: absolute;
+  display: inline-block;
+  content: '▾';
+  top: 18px;
+  right: 20px;
+}
+  
     display: flex;
     width: 100%;
     position: initial; // this was relative
@@ -30,48 +42,35 @@
 			z-index: 99999;
             border: 1px solid #eee;
             background: #fff;
-            width: 200px;
+            width: 100%;
 
 			ul {
 				left: -999em;
 				top: 0;
+                box-shadow: none;
+                padding-left: 1em;
+                border: none;
 			}
 
 			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
                 width: 100%;
-              margin-top: -1px;
+                margin-top: -1px;
+              a { border-bottom: 1px solid #eee; }
+              
+              &.current_page_item a, .current-menu-parent a {
+                border-bottom: none;
+              }
 			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-        li:last-child:hover > ul,
-		li.focus:last-child > ul {
-			right: 0;
+          
+            li > ul {
+              position: relative;
+              left: 0;
+            }
 		}
 	}
 
 	li {
 		float: left;
-	//	position: relative; // this
         
         &:last-child { margin-right: 0; }
 
@@ -102,6 +101,14 @@
 
 }
 
+.sub-menu {
+  display: none;
+  
+  &.toggled {
+    display: block;
+  }
+}
+
 @media (screen and min-width: 540px) {
   .main-navigation {
 
@@ -113,6 +120,56 @@
         &.menu-list {
           left: -999em;
           width: 200px;
+        }
+        
+        li {
+            &:hover > ul {
+              left: 100%;
+            }
+          
+          &:after {
+            right: 6px;
+            top: 17px;
+          }
+        }
+        
+        li:hover > ul {
+          display: block;
+          left: 0;
+        }
+        
+        ul { 
+          width: 200px;
+          box-shadow: 0 12px 50px rgba(0, 0, 0, 0.05);
+          border: 1px solid #eee;
+          
+          ul {
+            padding-left: 0;
+            border: 1px solid #eee;
+            
+            li {
+              border: none;
+            }
+          }
+          
+          li {
+              &:hover > ul,
+              &.focus > ul {
+              //    left: 0;
+                display: none;
+              }
+              &:hover > ul.toggled,
+              &.focus > ul.toggled {
+              //    left: 0;
+                display: block;
+              }
+          }
+
+          li > ul {
+          //  position: absolute;
+          //  left: -999em;
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.05);
+          }
         }
       }
 
