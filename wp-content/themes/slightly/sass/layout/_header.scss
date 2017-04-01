@@ -3,8 +3,9 @@
 }
 
 .site-branding {
-  flex-grow: 1;
-  min-width: 20%;
+//  flex-grow: 1;
+  width: 300px;
+  z-index: 1;
 }
 
 .site-title {
@@ -30,6 +31,7 @@
 
 .site-header-col {
   display: flex;
+  position: relative;
 }
 
 .banner-image {
