@@ -32,6 +32,7 @@
 .site-header-col {
   display: flex;
   position: relative;
+  padding: 0;
 }
 
 .banner-image {
@@ -41,9 +42,13 @@
     margin-bottom: 2em;
 }
 
-@media (screen and min-width: 520px) {
+@media (screen and min-width: 540px) {
     .banner-image {
         min-height: 380px;
+    }
+    .site-header-col {
+      padding-left: .5rem;
+      padding-right: .5rem;
     }
 }
 
