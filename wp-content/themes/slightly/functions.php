@@ -171,14 +171,14 @@ function recent_posts($no_posts = 10, $excerpts = true) {
                $feat_image = wp_get_attachment_url( get_post_thumbnail_id($posts->ID) );
            
            if ($feat_image) {
-                 $output .= '<div class="col-xs-12 col-sm-6 col-md-4"><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '"><div class="post-thumb mg-down" style="background-image: url(' . $feat_image . ');"></div></a><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
+                 $output .= '<div class="recent-post"><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '"><div class="post-thumb mg-down" style="background-image: url(' . $feat_image . ');"></div></a><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
               if($excerpts) {
                        $output.= '<p>' . stripslashes($posts->post_excerpt) . '</p>';
                }
 
                $output .= '</div>';
            } else {
-                $output .= '<div class="col-xs-12 col-sm-6 col-md-4"><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
+                $output .= '<div class="recent-post"><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
               if($excerpts) {
                        $output.= '<p>' . stripslashes($posts->post_excerpt) . '</p>';
                }

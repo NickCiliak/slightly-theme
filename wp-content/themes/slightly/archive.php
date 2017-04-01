@@ -25,7 +25,7 @@ get_header(); ?>
 
   <div class="row">
       
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-12 col-sm-7">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -57,7 +57,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
     </div>
-  <div class="col-xs-12 col-sm-4">
+  <div class="col-xs-12 col-sm-4 col-sm-offset-1">
       <?php
 get_sidebar(); ?>
       </div>

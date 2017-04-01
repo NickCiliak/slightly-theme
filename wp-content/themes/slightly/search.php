@@ -8,19 +8,23 @@
  */
 
 get_header(); ?>
+<div class="row">
+  <div class="col-xs-12">
+
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'slightly' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header><!-- .page-header -->  
+  </div>
+</div>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-12 col-sm-7">
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'slightly' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
@@ -46,7 +50,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
     </div>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-1">
       <?php
 get_sidebar(); ?>
       </div>

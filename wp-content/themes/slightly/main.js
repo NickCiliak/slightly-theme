@@ -1,4 +1,4 @@
-$('#primary-menu').append('<li class="more-menu"><a href="#" class="more-link">more</a><ul class="menu-list"></ul></li>');
+$('#primary-menu').append('<li class="more-menu"><a href="#" class="more-link"></a><ul class="menu-list"></ul></li>');
 
 $('.more-link').click(function(){
   $('.main-navigation').toggleClass('toggled');
@@ -13,7 +13,6 @@ function calcWidth() {
   
 if ($('#primary-menu > li:not(.more-menu)').length === 0) {
   
-      console.log('this');
       $('.more-menu > ul > li').each(function(){
         $(this).insertBefore($('#primary-menu > li.more-menu'));
       });
@@ -49,8 +48,9 @@ $(window).on('resize load',function(){
   
 if (window.innerWidth > 540) {
   calcWidth();
-  console.log("greater than");
+  $('.more-link').text('more');
 } else {
+  $('.more-link').text('menu');
   $('#primary-menu > li:not(.more-menu)').each(function(){
         $('#primary-menu > li:not(.more-menu)').last().prependTo($('#primary-menu .more-menu > ul'));
       });
