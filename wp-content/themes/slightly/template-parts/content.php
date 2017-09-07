@@ -13,7 +13,7 @@
     <div class="row no-pad">
       
         <?php if ( is_single() ) : ?>
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 no-pad">
+            <div class="col-xs-12 no-pad">
                 <header class="entry-header">
                     <?php
                         the_title( '<h1 class="entry-title">', '</h1>' );
@@ -81,6 +81,8 @@
                         'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'slightly' ),
                         'after'  => '</div>',
                     ) );
+                
+                echo '<p><a href="' . get_permalink() . '" class="read-more-link">Read More</a></p>';
                 ?>
             </div><!-- .entry-content -->
         <footer class="entry-footer">

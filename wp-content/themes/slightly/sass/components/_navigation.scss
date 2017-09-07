@@ -1,4 +1,8 @@
 .main-navigation {
+    
+    display: inline-block;
+    vertical-align: top;
+    
   .menu-list {
     display: none;
   }
@@ -27,8 +31,7 @@
 }
   
     display: flex;
-    width: 100%;
-    position: initial; // this was relative
+    position: initial;
 
   // weird menu wrapper
   div { width: 100%; }
@@ -38,8 +41,8 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-        width: 100%;
-        float: right;
+     //   width: 100%;
+      //  float: right;
       
       &.menu-list {
         left: 0;
@@ -80,7 +83,7 @@
 	}
 
 	li {
-		float: left;
+		//float: left;
         
         &:last-child { margin-right: 0; }
 
@@ -123,14 +126,33 @@
   }
 }
 
-@media (screen and min-width: 540px) {
+#primary-menu.menu-visible {
+    display: block;
+}
 
+#primary-menu {
+    display: none;
+}
+
+@media (screen and min-width: 768px) {
+
+.main-navigation #primary-menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+    
+    display: block;
+}
+    
   .main-navigation {
     
       position: relative;
+      display: inline-block;
 
       // #primary-menu
       ul {
+          
+          float: right;
 
         &.menu-list {
           left: -999em;
@@ -140,6 +162,7 @@
         // main .menu-item
         li {
           position: relative;
+            float: left;
         }
         // when you hover a main menu item, show the first sub menu under it
         li:hover > ul {
@@ -211,11 +234,6 @@
   
 }
 
-.main-navigation #primary-menu {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
 
 .comment-navigation,
 .posts-navigation,

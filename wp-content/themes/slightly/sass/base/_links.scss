@@ -36,9 +36,10 @@ p a,
 span a,
 .nav-previous a,
 .nav-next a {
-  border-bottom: 2px solid #d6d6d6;
+  border-bottom: 2px solid #25C26F;
 	&:hover,
 	&:active {
-        border-bottom-color: #333;
+        border-bottom-color: #25C26F;
+        color: #25C26F;
 	}
 }
