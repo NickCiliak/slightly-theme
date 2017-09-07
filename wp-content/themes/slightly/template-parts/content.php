@@ -19,7 +19,7 @@
                         the_title( '<h1 class="entry-title">', '</h1>' );
 
                     if ( 'post' === get_post_type() ) : ?>
-                    <div class="entry-meta">
+                    <div class="entry-meta entry-meta--single">
                         <?php slightly_posted_on(); ?>
                     </div><!-- .entry-meta -->
                     <?php
@@ -82,7 +82,7 @@
                         'after'  => '</div>',
                     ) );
                 
-                echo '<p><a href="' . get_permalink() . '" class="read-more-link">Read More</a></p>';
+                echo '<p><a href="' . get_permalink() . '" class="read-more-link button button--green">Read Post</a></p>';
                 ?>
             </div><!-- .entry-content -->
         <footer class="entry-footer">

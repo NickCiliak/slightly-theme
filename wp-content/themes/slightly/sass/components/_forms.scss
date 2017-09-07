@@ -15,10 +15,21 @@ input[type="submit"] {
 	padding: .6em 1em .6em;
     font-size: 16px;
     color: #333;
-    font-family: 'Source Sans Pro', sans-serif;
+    
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+    background-color: #fff;
+    font-size: 16px;
+    
+    background-color: $green;
+    border: none;
+    color: #fff;
+
 
 	&:hover {
-		border-color: $color__border-button-hover;
+		//border-color: $color__border-button-hover;
+        color: #fff
 	}
 
 	&:active,
@@ -26,6 +37,8 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+
 
 /*--------------------------------------------------------------
 # Fields
@@ -51,7 +64,6 @@ textarea {
 	border-radius: 3px;
 	padding: .6em 1em .6em;
     width: 100%;
-    font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.5;
 
 	&:focus {

@@ -20,7 +20,7 @@
         
 		<div class="site-info">
             &copy; <?php echo date('Y') ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> • 
-			<?php printf( esc_html__( '%1$s by %2$s.', 'Slightly' ), 'Slightly Theme', '<a href="http://nickciliak.com" rel="designer">Nick Ciliak</a>' ); ?>
+			Disclosure • Contact Us
 		</div><!-- .site-info -->
 
     </div>

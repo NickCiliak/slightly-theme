@@ -59,8 +59,13 @@
         font-weight: bold;
         letter-spacing: 2px;
         font-size: 14px;
+    margin: 6px 0 0 0;
   
     a { color: #989898; }
+    
+    &.entry-meta--single {
+        margin: 12px 0 0 0;
+    }
 }
 
 .post-thumb {

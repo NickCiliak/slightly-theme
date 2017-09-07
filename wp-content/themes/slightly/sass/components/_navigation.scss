@@ -25,9 +25,9 @@
   
 .current-menu-ancestor.current-menu-parent > a {
   border-bottom: none !important;
-        -webkit-box-shadow: inset 0px -2px 0px 0px #333;
-        -moz-box-shadow: inset 0px -2px 0px 0px #333;
-        box-shadow: inset 0px -2px 0px 0px #333;
+        -webkit-box-shadow: inset 0px -2px 0px 0px #33654A;
+        -moz-box-shadow: inset 0px -2px 0px 0px #33654A;
+        box-shadow: inset 0px -2px 0px 0px #33654A;
 }
   
     display: flex;
@@ -100,16 +100,18 @@
         font-weight: bold;
         letter-spacing: 2px;
         font-size: 14px;
+        transition: all .16s ease;
+        color: #33654A;
       
-      &.more-link {
-        padding-right: 0;
-      }
+        &:hover {
+            background-color: #CCE9DA;
+        }
 	}
   
     .current_page_item, .current-menu-parent {
-        -webkit-box-shadow: inset 0px -2px 0px 0px #333;
-        -moz-box-shadow: inset 0px -2px 0px 0px #333;
-        box-shadow: inset 0px -2px 0px 0px #333;
+        -webkit-box-shadow: inset 0px -2px 0px 0px #33654A;
+        -moz-box-shadow: inset 0px -2px 0px 0px #33654A;
+        box-shadow: inset 0px -2px 0px 0px #33654A;
       
       >a {
         border-bottom: none;
