@@ -37,7 +37,7 @@ get_header(); ?>
 	</div><!-- #primary -->
     </div>
       
-        <div class="col-xs-12 col-sm-4 col-sm-offset-1 no-pad">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-1">
       <?php
 get_sidebar(); ?>
       </div>
