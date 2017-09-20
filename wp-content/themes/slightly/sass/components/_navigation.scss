@@ -109,9 +109,11 @@
 	}
   
     .current_page_item, .current-menu-parent {
-        -webkit-box-shadow: inset 0px -2px 0px 0px #33654A;
-        -moz-box-shadow: inset 0px -2px 0px 0px #33654A;
-        box-shadow: inset 0px -2px 0px 0px #33654A;
+//        -webkit-box-shadow: inset 0px -2px 0px 0px #33654A;
+//        -moz-box-shadow: inset 0px -2px 0px 0px #33654A;
+//        box-shadow: inset 0px -2px 0px 0px #33654A;
+        
+        background-color: #CCE9DA;
       
       >a {
         border-bottom: none;
