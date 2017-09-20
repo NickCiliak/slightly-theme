@@ -3,4 +3,21 @@
     margin-top: 2em;
     padding: 20px 0;
     color: #989898;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-footer .smile {
+    position: absolute;
+    top: 30px;
+    right: 10%;
+    transform: scale(4) rotate(0);
+    opacity: .3;
+    stroke: $green;
+    transition: all 1s;
+    
+    &:hover {
+        opacity: 1;
+        transform: scale(2) rotate(720deg);
+    }
 }

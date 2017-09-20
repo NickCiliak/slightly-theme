@@ -30,7 +30,7 @@ get_header(); ?>
   <div class="row row--index">
       <div class="col-xs-12 col-sm-7">
           
-          <h2 class="h1">Honest thoughts on Flywheel WordPress hosting.</h2>
+          <h2 class="h1 headline">Honest thoughts on Flywheel WordPress hosting.</h2>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

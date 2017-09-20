@@ -31,16 +31,67 @@
 }
 
 .read-next {
-    border-bottom: 1px solid #eee;
-    border-top: 1px solid #eee;
-    padding: 2em 0;
+//    border-bottom: 1px solid #eee;
+//    border-top: 1px solid #eee;
+    padding: 0;
     margin: 0 0 4em 0;
   
   h2 { margin-bottom: 0; border-bottom: 2px solid #25C26F; display: inline-block; }
+    h5 { color: $green; }
+}
+
+.entry-header {
+    position: relative;
+    
+    &:hover .meta--up {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    
+    &:hover .entry-title span {
+        transform: translateY(-50%);
+    }
+    
+    &:hover .smile {
+        transform: scale(2.5) translate(-20px, 18px) rotate(0);
+        opacity: .4;
+    }
+}
+
+.entry-header .smile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(2) translate(-20px, 40px) rotate(-40deg);
+    opacity: 0;
+    transition: all .2s ease-out;
+    stroke: white;
+}
+
+.entry-meta.meta--up {
+    position: absolute;
+    top: 14px;
+    opacity: .8;
+    transition: all .2s ease-out;
+    a { color: #33654A; }
 }
 
 .entry-title {
     margin-bottom: 0;
+    
+    a {
+        display: block;
+        color: white;
+        background-color: #25C26F;
+        border-radius: 3px;
+        padding: 2.5em 1em 1em 1em;
+        margin-left: -1em;
+        
+        span {
+            display: block;
+            transition: all .3s ease-out;
+        }
+    }
 }
 
 .entry-content ul, .entry-content ol {
@@ -55,10 +106,10 @@
     font-weight: bold;
     color: #989898;
     letter-spacing: .5px;
-            text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2px;
-        font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
     margin: 6px 0 0 0;
   
     a { color: #989898; }
@@ -77,4 +128,41 @@
 
 .cat-links, tag-links {
   display: block;
+}
+
+.entry-footer {
+    border-bottom: 1px solid #eee;
+    padding: 0 0 1em 0;
+    
+    .read-more-link {
+        display: inline;
+    }
+    
+    p {
+        margin: 0;
+    }
+}
+
+.cats {
+    color: #989898;
+    padding: 1em 0;
+}
+
+@for $i from 1 through 10 {
+    article:nth-child( #{$i} ) .entry-title a {
+        background-color: hsl(148 + $i * 4, 68, 45);
+    }
+}
+
+@media (min-width: 498px) {
+    .entry-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .cats {
+        text-align: right;
+        padding: .5em 0;
+    }
 }
