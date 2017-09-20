@@ -58,7 +58,9 @@ get_header(); ?>
 
 			endwhile;
 
+            echo '<div class="row no-pad"><div class="col-xs-12 col-sm-11 no-pad">';
 			the_posts_navigation();
+            echo '</div></div>';
 
 		else :
 
