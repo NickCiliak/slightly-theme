@@ -27,9 +27,16 @@ get_header(); ?>
 <?php if( page_featured_image() ) : ?>
 <div class="banner-image" style="background-image: url(<?php echo page_featured_image();?>);"></div>
 <?php endif; ?>
-  <div class="row row--index">
-      <div class="col-xs-12 col-sm-7">
 
+<div class="row row--index">
+    <div class="col-xs-12">
+			<header class="page-header">
+				<h2 class="h1 page-title"><?php echo get_bloginfo( 'description' ); ?></h2>
+			</header><!-- .page-header -->
+    </div>
+</div>
+  <div class="row">
+      <div class="col-xs-12 col-sm-7">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -56,7 +63,9 @@ get_header(); ?>
 
 			endwhile;
 
+            echo '<div class="row no-pad"><div class="col-xs-12 col-sm-11 no-pad">';
 			the_posts_navigation();
+            echo '</div></div>';
 
 		else :
 

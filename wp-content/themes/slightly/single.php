@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-  <div class="row">
+  <div class="row row--index">
     <div class="col-xs-12">
 
 	<div id="primary" class="content-area">

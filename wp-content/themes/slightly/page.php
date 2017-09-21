@@ -19,8 +19,8 @@ get_header(); ?>
     <div class="banner-image" style="background-image: url(<?php echo $feat_image; ?>);"></div>
 <?php endif; ?>
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+  <div class="row row--index">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 no-pad">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

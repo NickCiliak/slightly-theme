@@ -11,7 +11,7 @@ get_header(); ?>
 
 		<?php
 		if ( have_posts() ) : ?>
-<div class="row">
+<div class="row row--index">
     <div class="col-xs-12">
 			<header class="page-header">
 				<?php
