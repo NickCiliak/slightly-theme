@@ -15,7 +15,6 @@ input[type="submit"] {
 	padding: .6em 1em .6em;
     font-size: 16px;
     color: #333;
-    font-family: 'Source Sans Pro', sans-serif;
 
 	&:hover {
 		border-color: $color__border-button-hover;
@@ -51,7 +50,6 @@ textarea {
 	border-radius: 3px;
 	padding: .6em 1em .6em;
     width: 100%;
-    font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.5;
 
 	&:focus {

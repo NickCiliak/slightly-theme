@@ -1,220 +1,190 @@
 .main-navigation {
-  .menu-list {
-    display: none;
-  }
-  &.toggled {
-    .menu-list {
-      display: block;
-    }
-  }
-  
-.menu-item-has-children {
-  position: relative;
-}
-.menu-item-has-children:after {
-  position: absolute;
-  display: inline-block;
-  content: '▾';
-  top: 18px;
-  right: 20px;
-}
-  
-.current-menu-ancestor.current-menu-parent > a {
-  border-bottom: none !important;
-        -webkit-box-shadow: inset 0px -2px 0px 0px #333;
-        -moz-box-shadow: inset 0px -2px 0px 0px #333;
-        box-shadow: inset 0px -2px 0px 0px #333;
-}
-  
-    display: flex;
-    width: 100%;
-    position: initial; // this was relative
-
-  // weird menu wrapper
-  div { width: 100%; }
-
-    // #primary-menu
-	ul {
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-        width: 100%;
-        float: right;
-      
-      &.menu-list {
-        left: 0;
-        width: 100%;
-      }
-        
-        // Subnavs
-		ul {
-			box-shadow: 0 12px 50px rgba(0, 0, 0, 0.05);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-            border: 1px solid #eee;
-            background: #fff;
-            width: 100%;
-
-			ul {
-				left: -999em;
-				top: 0;
-                box-shadow: none;
-                padding-left: 1em;
-                border: none;
-			}
-
-			li {
-                width: 100%;
-                margin-top: -1px;
-              a { border-bottom: 1px solid #eee; }
-			}
-          
-            li > ul {
-              position: relative;
-              left: 0;
-            }
-		}
-	}
-
-	li {
-		float: left;
-        
-        &:last-child { margin-right: 0; }
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-  
+        // Main navigation link
 	a {
-		display: block;
-		text-decoration: none;
-        padding: 20px;
+        display: block;
+        text-decoration: none;
         text-transform: uppercase;
         font-weight: bold;
+        padding: 20px;
         letter-spacing: 2px;
         font-size: 14px;
-      
-      &.more-link {
-        padding-right: 0;
-      }
+        position: relative;
+
+        &.more-link {
+            padding-right: 0;
+        }
+        
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            content: '';
+            transform: scaleX(0);
+            background-color: #000;
+            transition: all .2s ease-out;
+        }
+        
+        &:hover:after {
+            transform: scaleX(1);
+        }
 	}
-  
-    .current_page_item, .current-menu-parent {
+    
+    .current_page_item > a {
         -webkit-box-shadow: inset 0px -2px 0px 0px #333;
         -moz-box-shadow: inset 0px -2px 0px 0px #333;
         box-shadow: inset 0px -2px 0px 0px #333;
-      
-      >a {
-        border-bottom: none;
-      }
+    }
+}
+
+.main-navigation ul {
+    display: none;
+}
+
+/* Small menu. */
+.menu-toggle {
+    height: 100%;
+    border: none;
+    
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding-right: 0;
+}
+
+.main-navigation.toggled {
+    
+    ul {
+        display: block;
+        list-style: none;
+        padding: 0 0 0 20px;
     }
 
 }
 
-.sub-menu {
-  display: none;
-  
-  &.toggled {
-    display: block;
-  }
+.main-navigation.toggled > div {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    
+    > ul {
+        padding: 0;
+    }
 }
 
-@media (screen and min-width: 540px) {
-
-  .main-navigation {
+@media screen and (min-width: 37.5em) {
     
-      position: relative;
+    .main-navigation.toggled ul {
+        padding: 0;
+    }
+    
+    .main-navigation.toggled > div {
+        position: relative;
+        left: auto;
+        background: none;
+        width: 100%;
+        box-shadow: none;
+        border: none;
 
-      // #primary-menu
-      ul {
-
-        &.menu-list {
-          left: -999em;
-          width: 200px;
+        > ul {
+            padding: auto;
         }
-        
-        // main .menu-item
+    }
+
+    .main-navigation {
+        clear: both;
+        display: block;
+        float: left;
+
+        ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+
+            ul {
+                box-shadow: 0 12px 50px rgba(0, 0, 0, 0.05);
+                float: left;
+                position: absolute;
+                top: 100%;
+                left: -999em;
+                z-index: 99999;
+                border: 1px solid #eee;
+                background: #fff;
+                width: 100%;
+                width: 220px;
+
+                ul {
+                    left: -999em;
+                    top: 0;
+                    margin-top: -1px;
+                }
+
+                li {
+                    &:hover > ul,
+                    &.focus > ul {
+                        left: 100%;
+                    }
+                    width: 100%;
+                }
+
+                a {
+                    width: 100%;
+                }
+
+                :hover > a,
+                .focus > a {
+                }
+
+                a:hover,
+                a.focus {
+                }
+            }
+
+            li:hover > ul,
+            li.focus > ul {
+                left: auto;
+            }
+        }
+
         li {
-          position: relative;
-        }
-        // when you hover a main menu item, show the first sub menu under it
-        li:hover > ul {
-          display: block;
-          left: 0;
-        }
-        
-        // .sub-menu inside main li
-        ul { 
-          width: 200px;
-          box-shadow: 0 12px 50px rgba(0, 0, 0, 0.05);
-          border: 1px solid #eee;
-          
-          // .sub-menu in .sub-menu
-          ul {
-            padding-left: 1em;
-            border: none;
-            box-shadow: none;
-            width: 100%;
-          }
-          
-          // When you hover an item in a sub menu, if it has a sub menu inside it, show it if it's been toggled.
-          li {
-              &:hover > ul,
-              &.focus > ul {
-                display: none;
-              }
-              &:hover > ul.toggled,
-              &.focus > ul.toggled {
-                display: block;
-              }
-          }
-        }
-      }
-    
-      // make the More menu open aligned right so it doesnt go off the screen
-      #primary-menu > li:last-child:hover > ul {
-        display: block;
-        left: auto;
-        right: -14px;
-      }
+            float: left;
+            position: relative;
 
-      // make the last menu item open aligned right so it doesnt go off the screen
-      #primary-menu > li:nth-last-child(2):hover > ul {
-        display: block;
-        left: auto;
-        right: 0;
-      }
-    
-    // to make space for the down arrow so it looks even
-    #primary-menu > li.menu-item-has-children {
-      padding-right: 12px;
+            &:hover > a,
+            &.focus > a {
+            }
+        }
+
+        // Main navigation link
+        a {
+        //    padding: 20px;
+        }
+
+        .current_page_ancestor > a, .current_page_parent > a {
+            -webkit-box-shadow: inset 0px -2px 0px 0px #333;
+            -moz-box-shadow: inset 0px -2px 0px 0px #333;
+            box-shadow: inset 0px -2px 0px 0px #333;
+        }
+
+        .current-menu-parent {
+            -webkit-box-shadow: inset 0px -2px 0px 0px #333;
+            -moz-box-shadow: inset 0px -2px 0px 0px #333;
+            box-shadow: inset 0px -2px 0px 0px #333;
+        }
     }
 
-    .menu-item-has-children:after {
-      top: 17px;
-      right: 18px;
-    }
-
-    .more-menu:after {
-      position: absolute;
-      display: inline-block;
-      content: '▾';
-      top: 17px;
-      right: -14px;
-    }
-    
-  }
-  
-}
-
-.main-navigation #primary-menu {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
 }
 
 .comment-navigation,
