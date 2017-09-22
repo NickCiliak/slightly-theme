@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-<div class="row">
+<div class="row row--index">
   <div class="col-xs-12">
 
 			<header class="page-header">
@@ -17,7 +17,7 @@ get_header(); ?>
   </div>
 </div>
 
-  <div class="row row--index">
+  <div class="row">
     <div class="col-xs-12 col-sm-7">
 
 	<section id="primary" class="content-area">
