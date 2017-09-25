@@ -53,10 +53,11 @@
 }
 
 .site-header-col {
-  display: flex;
+    display: flex;
     justify-content: space-between;
-  position: relative;
-  padding: 0;
+    position: relative;
+    padding-left: .5rem;
+    padding-right: .5rem;
 }
 
 
@@ -76,10 +77,6 @@
 @media (screen and min-width: 540px) {
     .banner-image {
         min-height: 380px;
-    }
-    .site-header-col {
-      padding-left: .5rem;
-      padding-right: .5rem;
     }
 }
 

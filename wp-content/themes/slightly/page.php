@@ -20,7 +20,7 @@ get_header(); ?>
 <?php endif; ?>
 
   <div class="row row--index">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 no-pad">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
