@@ -64,6 +64,9 @@ pre {
 code, kbd, tt, var {
 	font-family: $font__code;
 	@include font-size(0.9375);
+    background-color: #eee;
+    padding: 3px 4px;
+    border-radius: 2px;
 }
 
 abbr, acronym {
