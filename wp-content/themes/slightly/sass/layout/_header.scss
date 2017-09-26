@@ -18,13 +18,11 @@
         letter-spacing: 2px;
         font-size: 14px;
   a {
-      padding: 20px;
+      padding: 16px 20px;
       margin-left: -20px;
     display: inline-block;
       position: relative;
 
-      
-      
         &:after {
             position: absolute;
             bottom: 0;
@@ -54,6 +52,7 @@
 
 .site-header-col {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
     padding-left: .5rem;
@@ -64,6 +63,10 @@
 @media screen and (min-width: 37.5em) {
     .site-header-col {
         justify-content: flex-start;
+    }
+    
+    .site-title a {
+        margin-right: 20px;
     }
 }
 
