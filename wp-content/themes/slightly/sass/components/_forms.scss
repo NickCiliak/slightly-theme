@@ -5,19 +5,15 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-//	border: 1px solid;
-//	border-color: $color__border-button;
 	border-radius: 3px;
     background-color: #fff;
 	color: rgba(0, 0, 0, .8);
 	@include font-size(0.75);
 	line-height: 1.5;
 	padding: .6em 1em .6em;
-  //  font-size: 16px;
     background-color: #333;
     color: #fff;
     border: none;
-    
     
     text-transform: uppercase;
     font-weight: bold;

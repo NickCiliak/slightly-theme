@@ -222,34 +222,54 @@
 .posts-navigation,
 .post-navigation {
 
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+//	.site-main & {
+//		margin: 0 0 1.5em;
+//		overflow: hidden;
+//	}
+//
+//	.nav-previous {
+//		float: left;
+//		width: 50%;
+//	}
+//
+//	.nav-next {
+//		float: right;
+//		text-align: right;
+//		width: 50%;
+//	}
 }
 
 
 .nav-links {
-    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
     
-    .nav-previous, .nav-next {
-      //  display: flex;
-       // border: 1px solid #eee;
+    .nav-previous a, .nav-next a {
+        border-radius: 3px;
+        background-color: #fff;
+        line-height: 1.5;
+        padding: 1em;
+        background-color: #333;
+        color: #fff;
+        border: none;
+
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 14px;
+
+        &:hover {
+            border: none;
+        }
+
+        &:active,
+        &:focus {
+            border: none;
+        }
         
-        a {
-        //    flex-grow: 1;
-         //   padding: 10px;
+        &:before,
+        &:after {
+            display: none;
         }
     }
     

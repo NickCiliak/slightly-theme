@@ -2,9 +2,8 @@ a {
 	color: $color__link;
     text-decoration: none;
 
-	&:visited {
-	//	color: $color__link-visited;
-	}
+	&:visited { }
+    
 	&:hover,
 	&:focus,
 	&:active {
@@ -36,9 +35,7 @@ p:not(.site-title) a,
 span a,
 .nav-previous a,
 .nav-next a {
-  //border-bottom: 2px solid #d6d6d6;
     position: relative;
-    
     border-bottom: 2px solid #d6d6d6;
     transition: all .2s ease-out;
 	&:active {
@@ -64,6 +61,4 @@ span a,
         border-bottom: 2px solid #333;
         transition-delay: .2s;
     }
-    
-    
 }
