@@ -57,6 +57,7 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
+    -webkit-appearance: none;
 	padding: .6em 1em .6em;
     width: 100%;
     line-height: 1.5;
@@ -88,16 +89,24 @@ label {
 // Other
 
 .search-form {
+    display: flex;
+    
+    label {
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+    
     .search-field {
-        float: left;
-        width: calc(70% - 1em);
-        margin-right: 1em;
-        -webkit-appearance: textfield;
+     //   float: left;
+     //   width: calc(70% - 1em);
+     //   margin-right: 1em;
+        -webkit-appearance: none;
     }
     
     .search-submit {
-        float: right;
-        width: 30%;
+    //    float: right;
+    //    width: 30%;
+        margin-left: 1em;
     }
 }
 
@@ -110,9 +119,6 @@ label {
         float: left;
         width: calc(70% - 1em);
         margin-right: 1em;
-      input[type="password"] {
-        -webkit-appearance: textfield;
-      }
     }
     
     input[type="submit"] {
