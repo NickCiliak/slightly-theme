@@ -7,7 +7,7 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: #6f6f6f;
 	}
 	&:focus {
 		outline: thin dotted;
@@ -15,7 +15,6 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
-        color: #333;
         border-bottom-color: #333;
 	}
 }
@@ -60,5 +59,6 @@ span a,
     &:hover {
         border-bottom: 2px solid #333;
         transition-delay: .2s;
+        color: #333;
     }
 }

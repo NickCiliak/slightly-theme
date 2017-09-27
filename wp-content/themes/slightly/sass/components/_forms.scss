@@ -13,6 +13,7 @@ input[type="submit"] {
 	padding: .6em 1em .6em;
     background-color: #333;
     color: #fff;
+    transition: all .2s ease-out;
     border: none;
     
     text-transform: uppercase;
@@ -21,14 +22,21 @@ input[type="submit"] {
     font-size: 14px;
     min-height: 45px;
 
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
-
+    &:hover,
 	&:active,
 	&:focus {
-		border-color: $color__border-button-focus;
+        color: #fff;
+        background-color: #6f6f6f;
 	}
+}
+
+.menu-toggle {
+    &:hover,
+    &:active,
+    &:focus {
+        color: inherit;
+        background-color: inherit;
+    }
 }
 
 /*--------------------------------------------------------------
