@@ -35,6 +35,10 @@
         &:hover:after {
             transform: scaleX(1);
         }
+      
+      &:hover {
+          color: #333;
+      }
     }
 }
 

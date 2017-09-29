@@ -19,8 +19,7 @@
     <div class="col-xs-12">
         
 		<div class="site-info">
-            &copy; <?php echo date('Y') ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> • 
-			<?php printf( esc_html__( '%1$s by %2$s.', 'Slightly' ), 'Slightly Theme', '<a href="http://nickciliak.com" rel="designer">Nick Ciliak</a>' ); ?>
+            &copy; <?php echo date('Y') ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> &bull; <?php printf( esc_html__( '%1$s by %2$s.', 'Slightly' ), 'Slightly Theme', '<a href="http://nickciliak.com" rel="designer">Nick Ciliak</a>' ); ?>
 		</div><!-- .site-info -->
 
     </div>
@@ -30,7 +29,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
 
 <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
 
