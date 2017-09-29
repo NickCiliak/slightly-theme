@@ -21,10 +21,12 @@ get_header(); ?>
             // Change thumbnail size, but I guess full is what you'll need
             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'full' );
             $url = $image[0];
-        } 
+        } else {
+            $url = 'undefined';
+        }
     return $url;
 } ?>
-<?php if( page_featured_image() ) : ?>
+<?php if( page_featured_image() !== 'undefined' ) : ?>
 <div class="banner-image" style="background-image: url(<?php echo page_featured_image();?>);"></div>
 <?php endif; ?>
 
