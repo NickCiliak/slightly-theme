@@ -2,7 +2,7 @@
 /**
  * Slightly Theme Customizer
  *
- * @package Slightly
+ * @package slightly
  */
 
 /**

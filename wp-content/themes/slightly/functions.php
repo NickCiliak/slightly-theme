@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Slightly
+ * @package slightly
  */
 
 if ( ! function_exists( 'slightly_setup' ) ) :

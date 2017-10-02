@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Slightly
+ * @package slightly
  */
 
 if ( ! function_exists( 'slightly_posted_on' ) ) :
