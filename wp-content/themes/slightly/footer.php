@@ -19,7 +19,7 @@
     <div class="col-xs-12">
         
 		<div class="site-info">
-            &copy; <?php echo date('Y') ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> &bull; <?php printf( esc_html__( '%1$s by %2$s.', 'slightly' ), 'Slightly Theme', '<a href="http://nickciliak.com" rel="designer">Nick Ciliak</a>' ); ?>
+            &copy; <?php echo intval( date('Y') ) ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> &bull; <?php printf( esc_html__( '%1$s by %2$s.', 'slightly' ), 'Slightly Theme', '<a href="http://nickciliak.com" rel="designer">Nick Ciliak</a>' ); ?>
 		</div><!-- .site-info -->
 
     </div>
