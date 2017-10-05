@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<?php function page_featured_image() {
+<?php function slightly_page_featured_image() {
         $id = get_queried_object_id ();
         // Check if the post/page has featured image
         if ( has_post_thumbnail( $id ) ) {
@@ -26,8 +26,8 @@ get_header(); ?>
         }
     return $url;
 } ?>
-<?php if( page_featured_image() !== 'undefined' ) : ?>
-<div class="banner-image" style="background-image: url(<?php echo page_featured_image();?>);"></div>
+<?php if( slightly_page_featured_image() !== 'undefined' ) : ?>
+<div class="banner-image" style="background-image: url(<?php echo slightly_page_featured_image();?>);"></div>
 <?php endif; ?>
 
 <div class="row row--index">

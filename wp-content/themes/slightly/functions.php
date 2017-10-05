@@ -144,50 +144,6 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Get recent posts for homepage
- * https://css-tricks.com/snippets/wordpress/recent-posts-function/
- */
-function recent_posts($no_posts = 10, $excerpts = true) {
-
-   global $wpdb;
-
-   $request = "SELECT ID, post_title, post_excerpt FROM $wpdb->posts WHERE post_status = 'publish' AND post_type='post' ORDER BY post_date DESC LIMIT $no_posts";
-
-   $posts = $wpdb->get_results($request);
-
-   if($posts) {
-
-       foreach ($posts as $posts) {
-               $post_title = stripslashes($posts->post_title);
-               $permalink = get_permalink($posts->ID);
-               $feat_image = wp_get_attachment_url( get_post_thumbnail_id($posts->ID) );
-           
-           if ($feat_image) {
-                 $output .= '<div class="recent-post"><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '"><div class="post-thumb mg-down" style="background-image: url(' . $feat_image . ');"></div></a><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
-              if($excerpts) {
-                       $output.= '<p>' . stripslashes($posts->post_excerpt) . '</p>';
-               }
-
-               $output .= '</div>';
-           } else {
-                $output .= '<div class="recent-post"><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
-              if($excerpts) {
-                       $output.= '<p>' . stripslashes($posts->post_excerpt) . '</p>';
-               }
-
-               $output .= '</div>';
-           }
-
-       }
-
-   } else {
-           $output .= '<li>No posts found</li>';
-   }
-
-   echo $output;
-}
-
-/**
  * Add theme support for custom logo in header
  */
 add_theme_support( 'custom-logo' );
