@@ -1,0 +1,26 @@
+.button,
+.comment-reply-link
+{
+    border-radius: 3px;
+    background-color: #fff;
+    line-height: 1.5;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    position: relative;
+    transition: all .2s ease-out;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+        background-color: #6f6f6f;
+    }
+
+}
