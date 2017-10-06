@@ -27,13 +27,13 @@ get_header(); ?>
     return $url;
 } ?>
 <?php if( slightly_page_featured_image() !== 'undefined' ) : ?>
-<div class="banner-image" style="background-image: url(<?php echo slightly_page_featured_image();?>);"></div>
+<div class="banner-image" style="background-image: url(<?php echo esc_url ( slightly_page_featured_image() );?>);"></div>
 <?php endif; ?>
 
 <div class="row row--index">
     <div class="col-xs-12">
 			<header class="page-header">
-				<h2 class="h1 page-title"><?php echo get_bloginfo( 'description' ); ?></h2>
+				<h2 class="h1 page-title"><?php echo esc_html ( get_bloginfo( 'description' ) ); ?></h2>
 			</header><!-- .page-header -->
     </div>
 </div>

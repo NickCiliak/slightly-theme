@@ -25,14 +25,10 @@ function slightly_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( '%s', 'post date', 'slightly' ),
+        /* translators: %s: post date. */
+		esc_html_x( '%s ', 'post date', 'slightly' ),
         $time_string
 	);
-
-//	$byline = sprintf(
-//		esc_html_x( 'by %s', 'post author', 'slightly' ),
-//		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-//	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
@@ -49,22 +45,17 @@ function slightly_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'slightly' ) );
 		if ( $categories_list && slightly_categorized_blog() ) {
+            /* translators: 1: list of categories. */
 			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'slightly' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'slightly' ) );
 		if ( $tags_list ) {
+            /* translators: 1: list of tags. */
 			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'slightly' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
-
-//	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-//		echo '<span class="comments-link">';
-//		/* translators: %s: post title */
-//		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'slightly' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
-//		echo '</span>';
-//	}
 
 	edit_post_link(
 		sprintf(

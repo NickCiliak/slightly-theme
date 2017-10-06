@@ -32,7 +32,7 @@
             $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
             $home_url = home_url( '/' );
             if ( has_custom_logo() ) {
-                    echo '<a href="'. $home_url . '">';
+                    echo '<a href="'. esc_url ( $home_url ) . '">';
                     echo '<img src="'. esc_url( $logo[0] ) .'">';
                     echo '</a>';
             } else {

@@ -29,7 +29,7 @@
                     
 <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 <?php if( $feat_image ) : ?>
-    <img src="<?php echo $feat_image; ?>" class="featured-image">
+    <img src="<?php echo esc_url ( $feat_image ); ?>" class="featured-image">
 <?php endif; ?>
                     
                     <?php
@@ -58,7 +58,7 @@
 
                 if ( 'post' === get_post_type() ) : ?>
                 <div class="entry-meta">
-                    <a href=" <?php echo get_permalink() ?> "><?php slightly_posted_on(); ?></a>
+                    <a href=" <?php echo esc_url( get_permalink() ) ?> "><?php slightly_posted_on(); ?></a>
                 </div><!-- .entry-meta -->
                 <?php
                 endif; ?>
@@ -67,7 +67,7 @@
                 
 <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
                 <?php if( $feat_image ) : ?>
-                    <a href=' <?php echo get_permalink() ?> '><img src="<?php echo $feat_image; ?>" class="featured-image"></a>
+                    <a href=' <?php echo esc_url( get_permalink() ) ?> '><img src="<?php echo esc_url( $feat_image ); ?>" class="featured-image"></a>
                 <?php endif; ?>
                 
             <?php

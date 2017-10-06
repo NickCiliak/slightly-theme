@@ -12,7 +12,9 @@ get_header(); ?>
   <div class="col-xs-12">
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'slightly' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php 
+                    /* translators: %s: search query. */
+                    printf( esc_html__( 'Search Results for: %s', 'slightly' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->  
   </div>
 </div>
