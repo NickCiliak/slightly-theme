@@ -27,7 +27,7 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Screenshots ==
 
-1. An example of the Slighly front page.
+1. An example of the Slightly front page.
 
 == Changelog ==
 
