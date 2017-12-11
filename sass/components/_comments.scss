@@ -64,6 +64,15 @@ textarea#comment {
   margin-bottom: 1.5em;
 }
 
+.comment-navigation {
+    margin: 2em 0;
+    
+    .nav-next a,
+    .nav-previous a {
+        display: block;
+    }
+}
+
 .comment-reply-link {
   position: absolute;
   top: 38px;
