@@ -26,10 +26,13 @@
                     endif; ?>
                 </header><!-- .entry-header -->
                 <div class="entry-content">
-                    
-<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+
+<?php
+    $slightly_thumb_id = get_post_thumbnail_id($post->ID);
+    $feat_image = wp_get_attachment_url( $slightly_thumb_id );
+    $alt = get_post_meta($slightly_thumb_id, '_wp_attachment_image_alt', true); ?>
 <?php if( $feat_image ) : ?>
-    <img src="<?php echo esc_url ( $feat_image ); ?>" class="featured-image">
+    <img src="<?php echo esc_url ( $feat_image ); ?>" alt="<?php echo esc_html( $alt ); ?>" class="featured-image">
 <?php endif; ?>
                     
                     <?php
@@ -65,10 +68,13 @@
             </header><!-- .entry-header -->
             <div class="entry-content">
                 
-<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-                <?php if( $feat_image ) : ?>
-                    <a href=' <?php echo esc_url( get_permalink() ) ?> '><img src="<?php echo esc_url( $feat_image ); ?>" class="featured-image"></a>
-                <?php endif; ?>
+            <?php
+                $slightly_thumb_id = get_post_thumbnail_id($post->ID);
+                $feat_image = wp_get_attachment_url( $slightly_thumb_id );
+                $alt = get_post_meta($slightly_thumb_id, '_wp_attachment_image_alt', true); ?>
+            <?php if( $feat_image ) : ?>
+                <img src="<?php echo esc_url ( $feat_image ); ?>" alt="<?php echo esc_html( $alt ); ?>" class="featured-image">
+            <?php endif; ?>
                 
             <?php
                     the_excerpt( sprintf(
