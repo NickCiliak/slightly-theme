@@ -31,6 +31,10 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.2 - December 11 2017 =
+* Fixed small styling oddity for comment pagination navigation buttons.
+* Added alt tag to post featured images.
+
 = 1.0.1 - October 06 2017 =
 * Fixed errors from theme submission.
 
