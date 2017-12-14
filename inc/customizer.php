@@ -12,97 +12,39 @@
  */
 function slightly_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
     $wp_customize->get_section( 'header_image' )->panel         = 'slightly_header_panel';
     $wp_customize->get_section( 'title_tagline' )->priority     = '9';
-    $wp_customize->get_section( 'title_tagline' )->title        = __('Site branding', 'slightly');
-
-    //___Header area___//
-    $wp_customize->add_panel( 'slightly_header_panel', array(
-        'priority'       => 10,
-        'capability'     => 'edit_theme_options',
-        'theme_supports' => '',
-        'title'          => __('Header Text and Image', 'slightly'),
+    $wp_customize->get_section( 'title_tagline' )->title        = __('Site branding', 'slightly');  
+    $wp_customize->remove_control('blogdescription');
+    
+    $wp_customize->add_setting('bodytext_color', array(
+     'default'        => '#404040',
+        'type'        => 'theme_mod',
+        'transport' => 'postMessage',
     ) );
-
-    //___Header text___//
-    $wp_customize->add_section(
-        'slightly_header_text',
-        array(
-            'title'         => __('Header Text', 'slightly'),
-            'priority'      => 14,
-            'panel'         => 'slightly_header_panel', 
-        )
-    );    
-    $wp_customize->add_setting(
-        'header_text',
-        array(
-            'default' => 'Header Headline',
-            'sanitize_callback' => 'slightly_sanitize_text',
-            'transport'     => 'postMessage'
-        )
-    );
-    $wp_customize->add_control(
-        'header_text',
-        array(
-            'label' => __( 'Header headline', 'slightly' ),
-            'section' => 'slightly_header_text',
-            'type' => 'text',
-            'priority' => 10
-        )
-    );
-    $wp_customize->add_setting(
-        'header_subtext',
-        array(
-            'default' => 'Header Subheadline',
-            'sanitize_callback' => 'slightly_sanitize_text',
-            'transport'     => 'postMessage'
-        )
-    );
-    $wp_customize->add_control(
-        'header_subtext',
-        array(
-            'label' => __( 'Header subheadline', 'slightly' ),
-            'section' => 'slightly_header_text',
-            'type' => 'textarea',
-            'priority' => 10
-        )
-    );    
-    $wp_customize->add_setting(
-        'header_button',
-        array(
-            'default' => 'Button text',
-            'sanitize_callback' => 'slightly_sanitize_text',
-        )
-    );
-    $wp_customize->add_control(
-        'header_button',
-        array(
-            'label' => __( 'Button text', 'slightly' ),
-            'section' => 'slightly_header_text',
-            'type' => 'text',
-            'priority' => 10
-        )
-    );
-    $wp_customize->add_setting(
-        'header_button_url',
-        array(
-            'default' => '',
-            'sanitize_callback' => 'esc_url_raw',
-        )
-    );
-    $wp_customize->add_control(
-        'header_button_url',
-        array(
-            'label' => __( 'Button URL', 'slightly' ),
-            'section' => 'slightly_header_text',
-            'type' => 'text',
-            'priority' => 11
-        )
-    );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bodytext_color', array(
+        'label'   => 'Body Text Color',
+        'section' => 'colors',
+        'settings'   => 'bodytext_color'
+    )));
     
 }
 add_action( 'customize_register', 'slightly_customize_register' );
+
+function slightly_customize_colors() {
+    $bodytext_color = get_theme_mod( 'bodytext_color' );
+
+    ?>
+    <style>
+        body, button, input, select, textarea, a { 
+            color:  <?php echo $bodytext_color; ?>; 
+        }
+    </style>
+
+    <?php
+
+}
+add_action( 'wp_head', 'slightly_customize_colors' );
 
 /**
  * Sanitize

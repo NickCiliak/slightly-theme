@@ -31,6 +31,10 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.3 - December 14 2017 =
+* Removed unused options from the WP Customizer. (custom header and site tagline)
+* Added body text color setting to WP Customizer.
+
 = 1.0.2 - December 11 2017 =
 * Fixed small styling oddity for comment pagination navigation buttons.
 * Added alt tag to post featured images.

@@ -119,11 +119,6 @@ function slightly_scripts() {
 add_action( 'wp_enqueue_scripts', 'slightly_scripts' );
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -147,28 +142,3 @@ require get_template_directory() . '/inc/jetpack.php';
  * Add theme support for custom logo in header
  */
 add_theme_support( 'custom-logo' );
-
-/**
- * Custom header text
- */
-function slightly_header_text() {
-
-	if ( !function_exists('pll_register_string') ) {
-		$header_text 		= get_theme_mod('header_text');
-		$header_subtext 	= get_theme_mod('header_subtext');
-		$header_button		= get_theme_mod('header_button');
-	} else {
-		$header_text 		= pll__(get_theme_mod('header_text'));
-		$header_subtext 	= pll__(get_theme_mod('header_subtext'));
-		$header_button		= pll__(get_theme_mod('header_button'));
-	}
-	$header_button_url	= get_theme_mod('header_button_url');
-
-	echo '<div class="header-info">
-            <h2>' . wp_kses_post($header_text) . '</h2>
-            <p>' . wp_kses_post($header_subtext) . '</p>';
-            if ($header_button_url) {
-                echo '<a class="button header-button" href="' . esc_url($header_button_url) . '">' . esc_html($header_button) . '</a>';
-            }
-	echo '</div>';
-}
