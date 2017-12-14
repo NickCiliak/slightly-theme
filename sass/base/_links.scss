@@ -7,7 +7,7 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
-		color: #6f6f6f;
+		color: $color__middlegray;
 	}
 	&:focus {
 		outline: thin dotted;
@@ -15,7 +15,7 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
-        border-bottom-color: #333;
+        border-bottom-color: $color__darkgray;
 	}
 }
 
@@ -48,10 +48,10 @@ span a,
 .nav-previous a,
 .nav-next a {
     position: relative;
-    border-bottom: 2px solid #d6d6d6;
+    border-bottom: 2px solid $color__regulargray;
     transition: all .2s ease-out;
 	&:active {
-        border-bottom-color: #333;
+        border-bottom-color: $color__darkgray;
 	}
     &:after {
         position: absolute;
@@ -70,8 +70,8 @@ span a,
     }
 
     &:hover {
-        border-bottom: 2px solid #333;
+        border-bottom: 2px solid $color__darkgray;
         transition-delay: .2s;
-        color: #333;
+        color: $color__darkgray;
     }
 }

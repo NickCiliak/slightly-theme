@@ -10,7 +10,7 @@ input[type="submit"] {
 	@include font-size(0.75);
 	line-height: 1.5;
 	padding: .6em 1em .6em;
-    background-color: #333;
+    background-color: $color__darkgray;
     color: #fff;
     transition: all .2s ease-out;
     border: none;
@@ -25,7 +25,7 @@ input[type="submit"] {
 	&:active,
 	&:focus {
         color: #fff;
-        background-color: #6f6f6f;
+        background-color: $color__middlegray;
 	}
 }
 
@@ -85,7 +85,7 @@ label {
     letter-spacing: 2px;
     font-size: 14px;
     margin-bottom: 8px;
-    color: #747474;
+    color: $color__middlegray;
 }
 
 
@@ -109,7 +109,7 @@ label {
 
 .post-password-form {
   
-  background-color: #eee;
+  background-color: $color__lightgray;
   border-radius: 4px;
   
     label {

@@ -23,7 +23,7 @@ h2, h2, h3, h4, h5, h6 {
 }
 
 h5 {
-    color: #747474;
+    color: $color__middlegray;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
@@ -50,7 +50,7 @@ address {
 }
 
 pre {
-	background-color: #eee;
+	background-color: $color__lightgray;
 	font-family: $font__pre;
 	@include font-size(0.9375);
 	line-height: $font__line-height-pre;
@@ -64,7 +64,7 @@ pre {
 code, kbd, tt, var {
 	font-family: $font__code;
 	@include font-size(0.9375);
-    background-color: #eee;
+    background-color: $color__lightgray;
     padding: 3px 4px;
     border-radius: 2px;
 }

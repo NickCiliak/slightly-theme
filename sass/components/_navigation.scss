@@ -27,14 +27,14 @@
         }
         
         &:hover {
-            color: #333;
+            color: $color__darkgray;
         }
 	}
     
     .current_page_item > a {
-        -webkit-box-shadow: inset 0px -2px 0px 0px #333;
-        -moz-box-shadow: inset 0px -2px 0px 0px #333;
-        box-shadow: inset 0px -2px 0px 0px #333;
+        -webkit-box-shadow: inset 0px -2px 0px 0px $color__darkgray;
+        -moz-box-shadow: inset 0px -2px 0px 0px $color__darkgray;
+        box-shadow: inset 0px -2px 0px 0px $color__darkgray;
     }
 }
 
@@ -53,7 +53,7 @@
     font-size: 14px;
     padding-left: 0;
     padding-right: 0;
-    color: #333;
+    color: $color__darkgray;
     background: #fff;
 }
 
@@ -74,7 +74,7 @@
     background: #fff;
     width: 100%;
     box-shadow: 0 12px 50px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eee;
+    border: 1px solid $color__lightgray;
     z-index: 9999;
     
     visibility: hidden;
@@ -136,7 +136,7 @@
                // left: -999em;
                 left: 0;
                 z-index: 99999;
-                border: 1px solid #eee;
+                border: 1px solid $color__lightgray;
                 background: #fff;
                 width: 100%;
                 width: 220px;
@@ -198,15 +198,15 @@
         }
 
         .current_page_ancestor > a, .current_page_parent > a {
-            -webkit-box-shadow: inset 0px -2px 0px 0px #333;
-            -moz-box-shadow: inset 0px -2px 0px 0px #333;
-            box-shadow: inset 0px -2px 0px 0px #333;
+            -webkit-box-shadow: inset 0px -2px 0px 0px $color__darkgray;
+            -moz-box-shadow: inset 0px -2px 0px 0px $color__darkgray;
+            box-shadow: inset 0px -2px 0px 0px $color__darkgray;
         }
 
         .current-menu-parent {
-            -webkit-box-shadow: inset 0px -2px 0px 0px #333;
-            -moz-box-shadow: inset 0px -2px 0px 0px #333;
-            box-shadow: inset 0px -2px 0px 0px #333;
+            -webkit-box-shadow: inset 0px -2px 0px 0px $color__darkgray;
+            -moz-box-shadow: inset 0px -2px 0px 0px $color__darkgray;
+            box-shadow: inset 0px -2px 0px 0px $color__darkgray;
         }
     }
 
@@ -231,7 +231,7 @@
         background-color: #fff;
         line-height: 1.5;
         padding: 1em;
-        background-color: #333;
+        background-color: $color__darkgray;
         color: #fff;
         border: none;
         transition: all .2s ease-out;
@@ -244,7 +244,7 @@
         &:hover {
             border: none;
             color: #fff;
-            background-color: #6f6f6f;
+            background-color: $color__middlegray;
         }
 
         &:active,

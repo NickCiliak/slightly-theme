@@ -31,6 +31,10 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.4 - December 14 2017 =
+* Added site tagline back to Customizer. D'oh.
+* Cleaned up some sass files.
+
 = 1.0.3 - December 14 2017 =
 * Removed unused options from the WP Customizer. (custom header and site tagline)
 * Added body text color setting to WP Customizer.

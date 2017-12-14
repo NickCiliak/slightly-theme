@@ -12,10 +12,10 @@
  */
 function slightly_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
     $wp_customize->get_section( 'header_image' )->panel         = 'slightly_header_panel';
     $wp_customize->get_section( 'title_tagline' )->priority     = '9';
-    $wp_customize->get_section( 'title_tagline' )->title        = __('Site branding', 'slightly');  
-    $wp_customize->remove_control('blogdescription');
+    $wp_customize->get_section( 'title_tagline' )->title        = __('Site branding', 'slightly');
     
     $wp_customize->add_setting('bodytext_color', array(
      'default'        => '#404040',
