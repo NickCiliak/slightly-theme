@@ -18,7 +18,7 @@
             height: 2px;
             content: '';
             transform: scaleX(0);
-            background-color: #000;
+            background-color: $color__black;
             transition: all .2s ease-out;
         }
         
@@ -54,7 +54,7 @@
     padding-left: 0;
     padding-right: 0;
     color: $color__darkgray;
-    background: #fff;
+    background: $color__white;
 }
 
 .main-navigation {
@@ -71,7 +71,7 @@
 .main-navigation > div {
     position: absolute;
     left: 0;
-    background: #fff;
+    background: $color__white;
     width: 100%;
     box-shadow: 0 12px 50px rgba(0, 0, 0, 0.05);
     border: 1px solid $color__lightgray;
@@ -137,7 +137,7 @@
                 left: 0;
                 z-index: 99999;
                 border: 1px solid $color__lightgray;
-                background: #fff;
+                background: $color__white;
                 width: 100%;
                 width: 220px;
                 visibility: hidden;
@@ -228,11 +228,11 @@
     
     .nav-previous a, .nav-next a {
         border-radius: 3px;
-        background-color: #fff;
+        background-color: $color__white;
         line-height: 1.5;
         padding: 1em;
         background-color: $color__darkgray;
-        color: #fff;
+        color: $color__white;
         border: none;
         transition: all .2s ease-out;
 
@@ -243,7 +243,7 @@
 
         &:hover {
             border: none;
-            color: #fff;
+            color: $color__white;
             background-color: $color__middlegray;
         }
 

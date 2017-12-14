@@ -1,5 +1,5 @@
 a {
-	color: $color__link;
+	color: $color__darkgray;
     text-decoration: none;
 
 	&:visited { }
@@ -20,7 +20,7 @@ a {
 }
 
 .edit-link a {
-    color: #fff;
+    color: $color__white;
     font-size: 12px;
     letter-spacing: 1px;
     padding: 6px 10px;
@@ -33,7 +33,7 @@ a {
     
     &:hover {
         border: none;
-        color: #fff;
+        color: $color__white;
         background-color: #27ad27;
         transition: all .2s ease-out;
         
@@ -61,7 +61,7 @@ span a,
         height: 2px;
         content: '';
         transform: scaleX(0);
-        background-color: #000;
+        background-color: $color__black;
         transition: all .2s ease-out;
     }
 

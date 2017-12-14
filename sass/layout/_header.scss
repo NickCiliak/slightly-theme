@@ -28,7 +28,7 @@
             height: 2px;
             content: '';
             transform: scaleX(0);
-            background-color: #000;
+            background-color: $color__black;
             transition: all .2s ease-out;
         }
         

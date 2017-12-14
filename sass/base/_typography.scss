@@ -70,12 +70,12 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted $color__middlegray;
 	cursor: help;
 }
 
 mark, ins {
-	background: $color__background-ins;
+	background: $color__lightyellow;
 	text-decoration: none;
 }
 
