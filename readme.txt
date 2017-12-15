@@ -31,7 +31,7 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0.5 - December 14 2017 =
+= 1.0.5 - December 15 2017 =
 * Tagline changes in Customizer now reflect in the view automatically.
 
 = 1.0.4 - December 14 2017 =
