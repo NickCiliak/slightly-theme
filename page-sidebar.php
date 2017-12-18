@@ -13,7 +13,7 @@ get_header(); ?>
 <div class="row row--index">
     <div class="col-xs-12">
 			<header class="page-header">
-				<h2 class="h1 page-title"><?php echo get_the_title(); ?></h2>
+				<h1 class="page-title"><?php echo get_the_title(); ?></h1>
 			</header><!-- .page-header -->
     </div>
 </div>
