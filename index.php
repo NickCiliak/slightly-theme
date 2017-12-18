@@ -26,8 +26,22 @@ get_header(); ?>
         }
     return $url;
 } ?>
-<?php if( slightly_page_featured_image() !== 'undefined' ) : ?>
-<div class="banner-image" style="background-image: url(<?php echo esc_url ( slightly_page_featured_image() );?>);"></div>
+
+<?php function slightly_page_featured_alt() {
+        $id = get_queried_object_id ();
+        // Check if the post/page has featured image
+        if ( has_post_thumbnail( $id ) ) {
+            $alt = get_post_meta(get_post_thumbnail_id( $id ), '_wp_attachment_image_alt', true); 
+        } else {
+            $alt = 'undefined';
+        }
+    return $alt;
+} ?>
+
+<?php if( slightly_page_featured_image() !== 'undefined' && slightly_page_featured_alt() !== 'undefined' ) : ?>
+    <div class="pageBannerImage">
+        <img src="<?php echo esc_url ( slightly_page_featured_image() ); ?>" alt="<?php echo esc_html( slightly_page_featured_alt() ); ?>" class="pageBannerImage__image">
+    </div>
 <?php endif; ?>
 
 <div class="row row--index">

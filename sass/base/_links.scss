@@ -46,10 +46,13 @@ a {
 p:not(.site-title) a,
 span a,
 .nav-previous a,
-.nav-next a {
+.nav-next a,
+.entry-content a {
     position: relative;
     border-bottom: 2px solid $color__regulargray;
     transition: all .2s ease-out;
+    font-weight: bold;
+    
 	&:active {
         border-bottom-color: $color__darkgray;
 	}
