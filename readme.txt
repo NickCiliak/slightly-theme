@@ -31,6 +31,12 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.6 - December 18 2017 =
+* Made :focus styles visually stronger and more consistent.
+* Adjusted featured images on some page templates to display as img elements as to include the alt tag.
+* Sidebar page template now correctly displays h1 element for the title.
+* More body copy link style consistency. Links are also now bolder.
+
 = 1.0.5 - December 15 2017 =
 * Tagline changes in Customizer now reflect in the view automatically.
 
