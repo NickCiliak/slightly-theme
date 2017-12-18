@@ -10,7 +10,7 @@ a {
 		color: $color__middlegray;
 	}
 	&:focus {
-		outline: thin dotted;
+		outline: 2px solid $color__darkgray;
 	}
 	&:hover,
 	&:active {
@@ -74,4 +74,8 @@ span a,
         transition-delay: .2s;
         color: $color__darkgray;
     }
+    
+	&:focus {
+		outline: 2px solid $color__darkgray;
+	}
 }

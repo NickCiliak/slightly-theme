@@ -241,7 +241,8 @@
         letter-spacing: 2px;
         font-size: 14px;
 
-        &:hover {
+        &:hover,
+        &:focus {
             border: none;
             color: $color__white;
             background-color: $color__middlegray;
