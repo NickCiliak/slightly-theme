@@ -28,27 +28,7 @@ function slightly_customize_register( $wp_customize ) {
         'section' => 'colors',
         'settings'   => 'bodytext_color'
     )));
-    
-    $wp_customize->add_section( 'posts-arrangement' , array(
-        'title' =>  'Posts Arrangement',
-    ) );
 
-
-    $wp_customize->add_setting( 'posts-grid', array(
-        'default' => 'arrangement-list',
-        'type' => 'theme_mod'
-    ) );
-
-    $wp_customize->add_control( 'posts-grid', array(
-        'label'      => 'Choose a post arrangement',
-        'section'    => 'posts-arrangement',
-        'settings'   => 'posts-grid',
-        'type'       => 'radio',
-        'choices'    => array(
-            'arrangement-list'   => 'List',
-            'arrangement-grid'  => 'Grid',
-    ) ) );
-    
 }
 add_action( 'customize_register', 'slightly_customize_register' );
 
