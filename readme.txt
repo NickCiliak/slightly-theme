@@ -31,6 +31,12 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.7 - December 27 2017 =
+* Add :focus state to menu toggle button.
+* Mobile menu will now close when it loses focus.
+* Changed "Read This Next" on single from h5 to span.
+* Fixed .post-edit-link and .comment-edit-link contrast ratio.
+
 = 1.0.6 - December 18 2017 =
 * Made :focus styles visually stronger and more consistent.
 * Adjusted featured images on some page templates to display as img elements as to include the alt tag.

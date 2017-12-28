@@ -20,21 +20,21 @@ a {
 }
 
 .edit-link a {
-    color: $color__white;
+    color: $color__white !important;
     font-size: 12px;
     letter-spacing: 1px;
     padding: 6px 10px;
-    border-radius: 6px;
+    border-radius: 3px;
     text-transform: uppercase;
-    background: #40de40;
+    background: $color__darkgray;
     border: none;
     font-weight: bold;
     transition: all .2s ease-out;
     
     &:hover {
         border: none;
-        color: $color__white;
-        background-color: #27ad27;
+        color: $color__white !important;
+        background-color: $color__middlegray;
         transition: all .2s ease-out;
         
         &:after {

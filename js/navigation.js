@@ -31,7 +31,11 @@
 	}
 
 	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
+        openCloseMenu();
+	};
+    
+    function openCloseMenu() {
+        if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
@@ -40,7 +44,7 @@
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
-	};
+    }
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
@@ -68,10 +72,30 @@
 					self.className += ' focus';
 				}
 			}
-
+            
 			self = self.parentElement;
 		}
-	}
+
+    }
+
+	/**
+	 * Checks to see if focusing on menu items or not and closes menu if not
+	 */
+    document.addEventListener("keyup", function(event) {
+        if (event.which === 9) {
+            if (document.activeElement.parentElement.className.indexOf( 'page_item' ) === -1) {
+                if (container.className.indexOf('toggled') !== -1) {
+                    // Close the menu
+                    container.className = container.className.replace( ' toggled', '' );
+                    button.setAttribute( 'aria-expanded', 'false' );
+                    menu.setAttribute( 'aria-expanded', 'false' );
+                }
+            } else {
+                // Keep menu open
+            }
+        }
+    });
+
 
 	/**
 	 * Toggles `focus` class to allow submenu access on tablets.
