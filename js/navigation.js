@@ -6,7 +6,6 @@
  */
 ( function() {
 	var container, button, menu, links, lastLink, i, len;
-    //var lastNavItemFocused = false;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
