@@ -31,6 +31,9 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.8 - January 14 2018 =
+* Mobile menu will close when focus moves past last nav item.
+
 = 1.0.7 - December 27 2017 =
 * Add :focus state to menu toggle button.
 * Mobile menu will now close when it loses focus.

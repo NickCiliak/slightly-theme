@@ -5,7 +5,8 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var container, button, menu, links, lastLink, i, len;
+    //var lastNavItemFocused = false;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -48,12 +49,30 @@
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
+    lastLink = links[links.length - 1 ];
 
 	// Each time a menu link is focused or blurred, toggle focus.
 	for ( i = 0, len = links.length; i < len; i++ ) {
 		links[i].addEventListener( 'focus', toggleFocus, true );
 		links[i].addEventListener( 'blur', toggleFocus, true );
 	}
+
+	/**
+	 * Closes the menu if the focus moves forward past the last item in the menu and if nothing in the menu is focused.
+	 */
+    lastLink.addEventListener('blur', function(){
+        window.setTimeout(function(){
+            var aNavLinkHasFocus = false;
+            for (var i = 0; i < links.length; i++) {
+                if (links[i] === document.activeElement) {
+                    aNavLinkHasFocus = true;
+                }
+            }
+            if (!aNavLinkHasFocus) {
+                openCloseMenu();
+            }
+        }, 50);
+    });
 
 	/**
 	 * Sets or removes .focus class on an element.
@@ -77,25 +96,6 @@
 		}
 
     }
-
-	/**
-	 * Checks to see if focusing on menu items or not and closes menu if not
-	 */
-    document.addEventListener("keyup", function(event) {
-        if (event.which === 9) {
-            if (document.activeElement.parentElement.className.indexOf( 'page_item' ) === -1) {
-                if (container.className.indexOf('toggled') !== -1) {
-                    // Close the menu
-                    container.className = container.className.replace( ' toggled', '' );
-                    button.setAttribute( 'aria-expanded', 'false' );
-                    menu.setAttribute( 'aria-expanded', 'false' );
-                }
-            } else {
-                // Keep menu open
-            }
-        }
-    });
-
 
 	/**
 	 * Toggles `focus` class to allow submenu access on tablets.
