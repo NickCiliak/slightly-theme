@@ -67,6 +67,11 @@ function slightly_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+    
+    /**
+     * Add theme support for custom logo in header
+     */
+    add_theme_support( 'custom-logo' );
 }
 endif;
 add_action( 'after_setup_theme', 'slightly_setup' );
@@ -137,8 +142,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Add theme support for custom logo in header
- */
-add_theme_support( 'custom-logo' );

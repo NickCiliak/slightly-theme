@@ -11,7 +11,7 @@ get_header(); ?>
     $alt = get_post_meta($slightly_thumb_id, '_wp_attachment_image_alt', true); ?>
 <?php if( $feat_image ) : ?>
     <div class="pageBannerImage">
-        <img src="<?php echo esc_url ( $feat_image ); ?>" alt="<?php echo esc_html( $alt ); ?>" class="pageBannerImage__image">
+        <img src="<?php echo esc_url ( $feat_image ); ?>" alt="<?php echo esc_attr( $alt ); ?>" class="pageBannerImage__image">
     </div>
 <?php endif; ?>
 

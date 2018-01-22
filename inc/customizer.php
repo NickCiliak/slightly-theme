@@ -24,7 +24,7 @@ function slightly_customize_register( $wp_customize ) {
         'sanitize_callback' => 'sanitize_hex_color'
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bodytext_color', array(
-        'label'   => 'Body Text Color',
+        'label'   => __('Body Text Color', 'slightly'),
         'section' => 'colors',
         'settings'   => 'bodytext_color'
     )));
@@ -38,7 +38,7 @@ function slightly_customize_colors() {
     ?>
     <style>
         body, button, input, select, textarea, a { 
-            color:  <?php echo $bodytext_color; ?>; 
+            color: <?php echo esc_html( $bodytext_color ); ?>;
         }
     </style>
 

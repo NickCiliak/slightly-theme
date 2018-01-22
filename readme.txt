@@ -31,6 +31,10 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.9 - January 22 2018 =
+* Fixed a number of translation and escaping issues.
+* Added copyright to readme and credit for flexboxgrid.css
+
 = 1.0.8 - January 14 2018 =
 * Mobile menu will close when focus moves past last nav item.
 
@@ -74,8 +78,12 @@ Fixes some important errors.
 
 == Credits ==
 
+Slightly WordPress Theme, Copyright 2018 Nick Ciliak
+Slightly is distributed under the terms of the GNU GPL
+
 * Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+* flexboxgrid.css https://github.com/kristoferjoseph/flexboxgrid, (C) 2013 Kristofer Joseph, [Apache](http://www.apache.org/licenses/LICENSE-2.0)
 * Created by [Nick Ciliak](http://nickciliak.com)
 
 `<?php code(); // goes in backticks ?>`

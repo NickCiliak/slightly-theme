@@ -32,7 +32,7 @@
     $feat_image = wp_get_attachment_url( $slightly_thumb_id );
     $alt = get_post_meta($slightly_thumb_id, '_wp_attachment_image_alt', true); ?>
 <?php if( $feat_image ) : ?>
-    <img src="<?php echo esc_url ( $feat_image ); ?>" alt="<?php echo esc_html( $alt ); ?>" class="featured-image">
+    <img src="<?php echo esc_url ( $feat_image ); ?>" alt="<?php echo esc_attr( $alt ); ?>" class="featured-image">
 <?php endif; ?>
                     
                     <?php
@@ -73,7 +73,7 @@
                 $feat_image = wp_get_attachment_url( $slightly_thumb_id );
                 $alt = get_post_meta($slightly_thumb_id, '_wp_attachment_image_alt', true); ?>
             <?php if( $feat_image ) : ?>
-                <img src="<?php echo esc_url ( $feat_image ); ?>" alt="<?php echo esc_html( $alt ); ?>" class="featured-image">
+                <img src="<?php echo esc_url ( $feat_image ); ?>" alt="<?php echo esc_attr( $alt ); ?>" class="featured-image">
             <?php endif; ?>
                 
             <?php

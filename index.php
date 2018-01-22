@@ -40,7 +40,7 @@ get_header(); ?>
 
 <?php if( slightly_page_featured_image() !== 'undefined' && slightly_page_featured_alt() !== 'undefined' ) : ?>
     <div class="pageBannerImage">
-        <img src="<?php echo esc_url ( slightly_page_featured_image() ); ?>" alt="<?php echo esc_html( slightly_page_featured_alt() ); ?>" class="pageBannerImage__image">
+        <img src="<?php echo esc_url ( slightly_page_featured_image() ); ?>" alt="<?php echo esc_attr( slightly_page_featured_alt() ); ?>" class="pageBannerImage__image">
     </div>
 <?php endif; ?>
 

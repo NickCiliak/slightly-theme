@@ -57,10 +57,10 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+    -webkit-appearance: none;
 	color: $color__text-main;
 	border: 1px solid $color__regulargray;
 	border-radius: 3px;
-    -webkit-appearance: none;
 	padding: .6em 1em .6em;
     width: 100%;
     line-height: 1.5;
@@ -100,6 +100,8 @@ label {
     
     .search-field {
         -webkit-appearance: none;
+    	color: $color__text-main;
+        border: 1px solid $color__regulargray;
     }
     
     .search-submit {
