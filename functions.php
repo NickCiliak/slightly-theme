@@ -72,6 +72,9 @@ function slightly_setup() {
      * Add theme support for custom logo in header
      */
     add_theme_support( 'custom-logo' );
+  
+    // Suport for wide alignment in Gutenberg
+    add_theme_support( 'align-wide' );
 }
 endif;
 add_action( 'after_setup_theme', 'slightly_setup' );
