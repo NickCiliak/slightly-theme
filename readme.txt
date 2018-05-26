@@ -2,7 +2,7 @@
 Contributors: nickcil
 Tags: one-column, blog, right-sidebar, accessibility-ready, featured-image-header, featured-images, sticky-post, threaded-comments
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 4.9.6
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -30,6 +30,13 @@ Slightly includes support for Infinite Scroll in Jetpack.
 1. An example of the Slightly front page.
 
 == Changelog ==
+
+= 1.0.10 - May 26 2018 =
+* Added support for Gutenberg blocks: photo (wide, full width) and button.
+
+= 1.0.9 - January 22 2018 =
+* Fixed a number of translation and escaping issues.
+* Added copyright to readme and credit for flexboxgrid.css
 
 = 1.0.9 - January 22 2018 =
 * Fixed a number of translation and escaping issues.
