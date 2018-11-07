@@ -26,19 +26,19 @@ textarea#comment {
     &:first-child {
         border-top: 1px solid $color__lightgray;
     }
-   
+
     ol, ul {
       margin-bottom: 1.5em;
-      
+
       ol, ul {
         margin-bottom: auto;
       }
     }
-   
+
     li.comment {
       list-style: none;
     }
-   
+
    &:last-of-type {
      margin-bottom: 2em;
    }
@@ -66,7 +66,7 @@ textarea#comment {
 
 .comment-navigation {
     margin: 2em 0;
-    
+
     .nav-next a,
     .nav-previous a {
         display: block;
@@ -91,12 +91,12 @@ textarea#comment {
     border-radius: 2px;
 }
 
-@media (screen and min-width: 768px) {
+@media screen and (min-width: 768px) {
     .comment-form-email {
         width: 48%;
         float: left;
     }
-    
+
     .comment-form-url {
         width: 48%;
         float: right;

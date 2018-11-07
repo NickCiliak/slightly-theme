@@ -31,11 +31,11 @@
             background-color: $color__black;
             transition: all .2s ease-out;
         }
-        
+
         &:hover:after {
             transform: scaleX(1);
         }
-      
+
       &:hover {
           color: $color__darkgray;
       }
@@ -65,7 +65,7 @@
     .site-header-col {
         justify-content: flex-start;
     }
-    
+
     .site-title a {
         margin-right: 20px;
     }
@@ -86,21 +86,21 @@
     transform: translate(-50%, -50%);
 }
 
-@media (screen and min-width: 540px) {
+@media screen and (min-width: 540px) {
 
     .pageBannerImage {
         min-height: 380px;
     }
 }
 
-@media (screen and min-width: 728px) {
+@media screen and (min-width: 728px) {
 
     .pageBannerImage {
         min-height: 450px;
     }
 }
 
-@media (screen and min-width: 1080px) {
+@media screen and (min-width: 1080px) {
 
     .pageBannerImage {
         min-height: 500px;
