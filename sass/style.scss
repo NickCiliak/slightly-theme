@@ -4,7 +4,7 @@ Theme URI: http://slightlytheme.com
 Author: Nick Ciliak
 Author URI: http://nickciliak.com
 Description: Slightly is a minimal, clean, ever-so-slightly opinionated WP theme for a beautifully simple start.
-Version: 1.0.10
+Version: 1.0.11
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: slightly
@@ -19,6 +19,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+
+// Use this command to compile the CSS. Must have Sass installed.
+// sass -t compressed --sourcemap=none --watch sass/style.scss:style.css
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:

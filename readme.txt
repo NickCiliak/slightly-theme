@@ -2,7 +2,7 @@
 Contributors: nickcil
 Tags: one-column, blog, right-sidebar, accessibility-ready, featured-image-header, featured-images, sticky-post, threaded-comments
 Requires at least: 4.0
-Tested up to: 4.9.6
+Tested up to: 5.0.0
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -30,6 +30,9 @@ Slightly includes support for Infinite Scroll in Jetpack.
 1. An example of the Slightly front page.
 
 == Changelog ==
+
+= 1.0.11 - December 8 2018 =
+* Slightly has been tested for WordPress 5.0 and the new Gutenberg editor.
 
 = 1.0.10 - May 26 2018 =
 * Added support for Gutenberg blocks: photo (wide, full width) and button.
