@@ -36,7 +36,9 @@ function slightly_customize_register( $wp_customize ) {
     )));
   
     $wp_customize->add_setting(
-        'hide_category_prefix'
+        'hide_category_prefix', array(
+        'sanitize_callback' => 'slightly_sanitize_checkbox'
+          )
     );
   
     $wp_customize->add_control('hide_category_prefix', array(
@@ -47,7 +49,9 @@ function slightly_customize_register( $wp_customize ) {
     );
   
     $wp_customize->add_setting(
-        'hide_main_sidebar'
+        'hide_main_sidebar', array(
+        'sanitize_callback' => 'slightly_sanitize_checkbox'
+          )
     );
   
     $wp_customize->add_control('hide_main_sidebar', array(
@@ -92,6 +96,17 @@ add_action( 'wp_head', 'slightly_customize_colors' );
 //Text
 function slightly_sanitize_text( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
+}
+
+//Checkbox
+function slightly_sanitize_checkbox( $input ){
+  //returns 1 if checkbox is checked and empty string if not
+  if ($input == 1) {
+    return 1;
+  } else {
+    return '';
+  }
+//  return ( isset( $input ) ? '1' : '' );
 }
 
 /**
