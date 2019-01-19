@@ -5,17 +5,18 @@
  * @package slightly
  */
 
-$wp_customize->add_section( 'slightly_slightly_settings_section' , array(
-    'title'      => __( 'Slightly Settings', 'slightly' ),
-    'priority'   => 1,
-) );
-
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function slightly_customize_register( $wp_customize ) {
+
+    $wp_customize->add_section( 'slightly_slightly_settings_section' , array(
+      'title'      => __( 'Slightly Settings', 'slightly' ),
+      'priority'   => 1,
+    ) );
+  
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
     $wp_customize->get_section( 'header_image' )->panel         = 'slightly_header_panel';
