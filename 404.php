@@ -10,16 +10,24 @@
 get_header(); ?>
 
 <div class="row row--index">
-    <div class="col-xs-12">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'slightly' ); ?></h1>
-				</header><!-- .page-header -->
-
+      <?php if( get_theme_mod( 'hide_main_sidebar' ) == '1') { ?>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <?php } else {?>
+        <div class="col-xs-12">
+      <?php } //end if ?>
+        <header class="page-header">
+            <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'slightly' ); ?></h1>
+        </header><!-- .page-header -->
     </div>
 </div>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-7">
+    
+      <?php if( get_theme_mod( 'hide_main_sidebar' ) == '1') { ?>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <?php } else {?>
+        <div class="col-xs-12 col-sm-7">
+      <?php } //end if ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -35,10 +43,12 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
       </div>
+    <?php if( get_theme_mod( 'hide_main_sidebar' ) == '') { ?>
     <div class="col-xs-12 col-sm-4 col-sm-offset-1">
         <?php
         get_sidebar(); ?>
     </div>
+    <?php } // end if ?>
 </div>
 
 <?php

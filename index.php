@@ -45,14 +45,22 @@ get_header(); ?>
 <?php endif; ?>
 
 <div class="row row--index">
-    <div class="col-xs-12">
+      <?php if( get_theme_mod( 'hide_main_sidebar' ) == '1') { ?>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <?php } else {?>
+        <div class="col-xs-12">
+      <?php } //end if ?>
 			<header class="page-header">
 				<h2 class="h1 page-title tagline"><?php echo esc_html ( get_bloginfo( 'description' ) ); ?></h2>
 			</header><!-- .page-header -->
     </div>
 </div>
   <div class="row">
-      <div class="col-xs-12 col-sm-7">
+      <?php if( get_theme_mod( 'hide_main_sidebar' ) == '1') { ?>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <?php } else {?>
+        <div class="col-xs-12 col-sm-7">
+      <?php } //end if ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -93,12 +101,14 @@ get_header(); ?>
 	</div><!-- #primary -->
         
     </div>
+  <?php if( get_theme_mod( 'hide_main_sidebar' ) == '') { ?>
   <div class="col-xs-12 col-sm-4 col-sm-offset-1">
       <?php
 get_sidebar(); ?>
       </div>
       
   </div>
+  <?php } // end if ?>
 
 <?php
 get_footer();

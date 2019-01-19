@@ -45,6 +45,17 @@ function slightly_customize_register( $wp_customize ) {
         'section' => 'slightly_slightly_settings_section',
       )
     );
+  
+    $wp_customize->add_setting(
+        'hide_main_sidebar'
+    );
+  
+    $wp_customize->add_control('hide_main_sidebar', array(
+        'type' => 'checkbox',
+        'label' => 'Hide sidebar on all pages (except pages using Sidebar Page template)',
+        'section' => 'slightly_slightly_settings_section',
+      )
+    );
 
 }
 add_action( 'customize_register', 'slightly_customize_register' );

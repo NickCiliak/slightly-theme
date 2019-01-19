@@ -12,7 +12,11 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 <div class="row row--index">
-    <div class="col-xs-12">
+      <?php if( get_theme_mod( 'hide_main_sidebar' ) == '1') { ?>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <?php } else {?>
+        <div class="col-xs-12">
+      <?php } //end if ?>
 			<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -25,7 +29,11 @@ get_header(); ?>
 
   <div class="row">
       
-    <div class="col-xs-12 col-sm-7">
+      <?php if( get_theme_mod( 'hide_main_sidebar' ) == '1') { ?>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <?php } else {?>
+        <div class="col-xs-12 col-sm-7">
+      <?php } //end if ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -57,12 +65,14 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
     </div>
-  <div class="col-xs-12 col-sm-4 col-sm-offset-1">
-      <?php
-get_sidebar(); ?>
-      </div>
-      
-  </div>
+    <?php if( get_theme_mod( 'hide_main_sidebar' ) == '') { ?>
+    <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+        <?php
+  get_sidebar(); ?>
+        </div>
+
+    </div>
+  <?php } // end if ?>
 
 <?php
 get_footer();
