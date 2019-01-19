@@ -31,6 +31,11 @@ Slightly includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.1.0 - January 19 2019 =
+* Add customizer option for hiding "Category:" prefix on category page title
+* Add customizer option to remove sidebar and center content on pages
+* Fix bug where custom colors did not apply to the mobile navigation
+
 = 1.0.11 - December 8 2018 =
 * Slightly has been tested for WordPress 5.0 and the new Gutenberg editor.
 
