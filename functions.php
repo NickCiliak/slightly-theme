@@ -145,3 +145,17 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Remove the prefix from the category title if user has setting on.
+ */
+function slightly_prefix_category_title( $title ) {
+    if ( is_category() ) {
+      if( get_theme_mod( 'hide_category_prefix' ) == 1) {
+        $title = single_cat_title( '', false );
+      }
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'slightly_prefix_category_title' );
+

@@ -5,6 +5,11 @@
  * @package slightly
  */
 
+$wp_customize->add_section( 'slightly_slightly_settings_section' , array(
+    'title'      => __( 'Slightly Settings', 'slightly' ),
+    'priority'   => 1,
+) );
+
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
@@ -28,6 +33,17 @@ function slightly_customize_register( $wp_customize ) {
         'section' => 'colors',
         'settings'   => 'bodytext_color'
     )));
+  
+    $wp_customize->add_setting(
+        'hide_category_prefix'
+    );
+  
+    $wp_customize->add_control('hide_category_prefix', array(
+        'type' => 'checkbox',
+        'label' => 'Hide "Category:" prefix on category archive pages',
+        'section' => 'slightly_slightly_settings_section',
+      )
+    );
 
 }
 add_action( 'customize_register', 'slightly_customize_register' );
