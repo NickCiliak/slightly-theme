@@ -62,11 +62,22 @@ add_action( 'customize_register', 'slightly_customize_register' );
 
 function slightly_customize_colors() {
     $bodytext_color = get_theme_mod( 'bodytext_color' );
+    $background_color = '#'.get_theme_mod( 'background_color' );
 
     ?>
     <style>
         body, button, input, select, textarea, a { 
             color: <?php echo esc_html( $bodytext_color ); ?>;
+        }
+      
+        .menu-toggle {
+          color: <?php echo esc_html( $bodytext_color ); ?>;
+          background-color: <?php echo esc_html( $background_color ); ?>;
+        }
+      
+        #primary-menu {
+          color: <?php echo esc_html( $bodytext_color ); ?>;
+          background-color: <?php echo esc_html( $background_color ); ?>;
         }
     </style>
 
