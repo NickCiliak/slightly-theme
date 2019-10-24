@@ -2,7 +2,7 @@
 Contributors: nickcil
 Tags: one-column, blog, right-sidebar, accessibility-ready, featured-image-header, featured-images, sticky-post, threaded-comments
 Requires at least: 4.0
-Tested up to: 5.0.0
+Tested up to: 5.2.4
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -30,6 +30,9 @@ Slightly includes support for Infinite Scroll in Jetpack.
 1. An example of the Slightly front page.
 
 == Changelog ==
+
+= 1.1.1 - October 23 2019 =
+* Change text and url for theme credit in footer.
 
 = 1.1.0 - January 19 2019 =
 * Add customizer option for hiding "Category:" prefix on category page title
@@ -93,7 +96,7 @@ Fixes some important errors.
 
 == Credits ==
 
-Slightly WordPress Theme, Copyright 2018 Nick Ciliak
+Slightly WordPress Theme, Copyright 2019 Nick Ciliak
 Slightly is distributed under the terms of the GNU GPL
 
 * Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

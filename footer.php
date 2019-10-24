@@ -20,8 +20,8 @@
         
 		<div class="site-info">
             &copy; <?php echo intval( date_i18n(__('Y','slightly')) ) ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> &bull; <?php 
-                /* translators: 1: Theme name, 2: Theme author. */
-                printf( esc_html__( '%1$s by %2$s.', 'slightly' ), 'Slightly Theme', '<a href="https://nickciliak.com/?ref=slightlytheme" rel="designer">Nick Ciliak</a>' ); ?>
+                /* translators: 1: Theme name */
+                printf( esc_html__( '%1$s', 'slightly' ), '<a href="https://slightlytheme.com/?ref=footer">Slightly Theme</a>' ); ?>
 		</div><!-- .site-info -->
 
     </div>

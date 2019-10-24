@@ -106,7 +106,6 @@ function slightly_sanitize_checkbox( $input ){
   } else {
     return '';
   }
-//  return ( isset( $input ) ? '1' : '' );
 }
 
 /**
