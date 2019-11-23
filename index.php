@@ -47,7 +47,11 @@ get_header(); ?>
 <div class="row row--index">
     <div class="col-xs-12">
 			<header class="page-header">
-				<h2 class="h1 page-title tagline"><?php echo esc_html ( get_bloginfo( 'description' ) ); ?></h2>
+				<h2 class="h1 page-title"><?php echo esc_html ( get_bloginfo( 'title' ) ); ?> - 
+					<span class="tagline">	
+						<?php echo esc_html ( get_bloginfo( 'description' ) ); ?>
+					</span>
+				</h2>
 			</header><!-- .page-header -->
     </div>
 </div>

@@ -1,5 +1,5 @@
 /*!
-Theme Name: Slightly
+Theme Name: Slightly Customized
 Theme URI: http://slightlytheme.com
 Author: Nick Ciliak
 Author URI: http://nickciliak.com
@@ -19,9 +19,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-
-// Use this command to compile the CSS. Must have Sass installed.
-// sass -t compressed --sourcemap=none --watch sass/style.scss:style.css
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -62,7 +59,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
-
 @import "mixins/mixins-master";
 
 @import "base/variables";
