@@ -16,7 +16,7 @@
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 no-pad">
                 <header class="entry-header">
                     <?php
-                        the_title( '<h1 class="entry-title">', '</h1>' );
+                        the_title( '<h1 class="retro entry-title">', '</h1>' );
 
                     if ( 'post' === get_post_type() ) : ?>
                     <div class="entry-meta">
@@ -57,7 +57,7 @@
         <div class="col-xs-12 col-sm-11 no-pad">
             <header class="entry-header">
                 <?php
-                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                    the_title( '<h2 class="retro entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
                 if ( 'post' === get_post_type() ) : ?>
                 <div class="entry-meta">
