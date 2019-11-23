@@ -1,4 +1,4 @@
-=== Slightly ===
+=== Slightly origin  ===
 Contributors: nickcil
 Tags: one-column, blog, right-sidebar, accessibility-ready, featured-image-header, featured-images, sticky-post, threaded-comments
 Requires at least: 4.0
